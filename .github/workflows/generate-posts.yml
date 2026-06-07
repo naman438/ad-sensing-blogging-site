@@ -34,4 +34,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: 'chore: auto-generate daily post'
-          file_pattern: 'content/posts/*.md'
+          file_pattern: 'content/posts/*.md content/used-topics.json'
