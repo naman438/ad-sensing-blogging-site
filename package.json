@@ -6,12 +6,22 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "generate": "node scripts/generate.mjs",
+    "generate:llm": "node scripts/generate.mjs llm",
+    "generate:finance": "node scripts/generate.mjs finance",
+    "generate:tech": "node scripts/generate.mjs tech"
   },
   "dependencies": {
+    "date-fns": "^4.3.0",
+    "dotenv": "^17.4.2",
+    "gray-matter": "^4.0.3",
+    "groq-sdk": "^1.2.0",
     "next": "16.2.6",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "reading-time": "^1.5.0",
+    "slugify": "^1.6.9"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
