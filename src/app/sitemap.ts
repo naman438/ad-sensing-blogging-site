@@ -3,7 +3,7 @@ import { getAllPosts } from '@/lib/posts';
 import { CATEGORIES } from '@/types';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://insightpulse.vercel.app';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://succeedstack.com';
 
   const posts = await getAllPosts(200).catch(() => []);
 

@@ -8,8 +8,8 @@ import { CATEGORIES } from '@/types';
 
 export const revalidate = 3600;
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://insightpulse.vercel.app';
-const SITE_NAME = 'InsightPulse';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://succeedstack.com';
+const SITE_NAME = 'SucceedStack';
 
 export const metadata: Metadata = {
   alternates: { canonical: SITE_URL },

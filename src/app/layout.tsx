@@ -5,8 +5,8 @@ import Footer from '@/components/Footer';
 import JsonLd from '@/components/JsonLd';
 import './globals.css';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://insightpulse.vercel.app';
-const SITE_NAME = 'InsightPulse';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://succeedstack.com';
+const SITE_NAME = 'SucceedStack';
 const SITE_DESC = 'Fresh AI-generated insights on finance, large language models, technology, crypto, and productivity. Published daily.';
 
 export const metadata: Metadata = {

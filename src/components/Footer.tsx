@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-white font-semibold text-lg mb-3">InsightPulse</h3>
+            <h3 className="text-white font-semibold text-lg mb-3">SucceedStack</h3>
             <p className="text-sm leading-relaxed">
               AI-powered articles on finance, technology, LLMs, and more. Fresh insights published daily.
             </p>
@@ -33,7 +33,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-sm text-center">
-          <p>&copy; {new Date().getFullYear()} InsightPulse. Content generated with AI for informational purposes only.</p>
+          <p>&copy; {new Date().getFullYear()} SucceedStack. Content generated with AI for informational purposes only.</p>
         </div>
       </div>
     </footer>

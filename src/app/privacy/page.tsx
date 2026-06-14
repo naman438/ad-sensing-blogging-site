@@ -10,7 +10,7 @@ export default function PrivacyPage() {
         <p>Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
 
         <h2>Information We Collect</h2>
-        <p>InsightPulse is a content website. We do not collect personal information directly. However, third-party services we use (such as Google AdSense and analytics tools) may collect data including:</p>
+        <p>SucceedStack is a content website. We do not collect personal information directly. However, third-party services we use (such as Google AdSense and analytics tools) may collect data including:</p>
         <ul>
           <li>IP address and general location</li>
           <li>Browser type and device information</li>
@@ -25,7 +25,7 @@ export default function PrivacyPage() {
         <p>Third-party advertising and analytics services used on this site may place cookies on your device. You can control cookie settings through your browser preferences.</p>
 
         <h2>Content Disclaimer</h2>
-        <p>Articles on InsightPulse are generated with the assistance of artificial intelligence. Content is for informational purposes only and does not constitute financial, legal, or professional advice.</p>
+        <p>Articles on SucceedStack are generated with the assistance of artificial intelligence. Content is for informational purposes only and does not constitute financial, legal, or professional advice.</p>
 
         <h2>Contact</h2>
         <p>For privacy-related questions, please contact us through our website.</p>

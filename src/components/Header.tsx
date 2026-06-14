@@ -12,7 +12,7 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
-            InsightPulse
+            SucceedStack
           </Link>
 
           {/* Desktop nav */}
