@@ -27,6 +27,7 @@
   ],
   "tech": [
     "database indexing strategies for performance",
-    "how serverless architecture saves money"
+    "how serverless architecture saves money",
+    "how HTTPS and TLS work under the hood"
   ]
 }
