@@ -26,6 +26,12 @@ export default function Header() {
                 {cat.label}
               </Link>
             ))}
+            <Link href="/about" className="px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors">
+              About
+            </Link>
+            <Link href="/contact" className="px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors">
+              Contact
+            </Link>
           </nav>
 
           {/* Mobile menu button */}
@@ -57,6 +63,12 @@ export default function Header() {
                 {cat.label}
               </Link>
             ))}
+            <Link href="/about" className="px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md" onClick={() => setMenuOpen(false)}>
+              About
+            </Link>
+            <Link href="/contact" className="px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md" onClick={() => setMenuOpen(false)}>
+              Contact
+            </Link>
           </nav>
         )}
       </div>

@@ -2,43 +2,44 @@
   "llm": [
     "mixture of experts architecture in AI",
     "multimodal AI models that process images and text",
-    "LLM benchmarks — what they measure and what they miss"
+    "how transformer architecture powers modern AI",
+    "LLMs for data analysis and insights",
+    "real-time AI with streaming APIs",
+    "AI guardrails and content moderation"
   ],
   "crypto": [
     "central bank digital currencies vs crypto",
     "how to evaluate a new crypto project",
     "cross-chain bridges and interoperability",
     "how to avoid crypto scams",
-    "gaming and crypto — play-to-earn explained",
-    "understanding impermanent loss in DeFi"
+    "NFTs beyond art — real-world use cases",
+    "how DAOs are changing organizational governance",
+    "how to analyze on-chain data",
+    "crypto regulation — what is coming"
   ],
   "finance": [
     "understanding your credit score and how to improve it",
     "Roth IRA vs traditional IRA decision guide",
     "dollar-cost averaging in volatile markets",
-    "how to build credit from scratch",
-    "the psychology of money and spending habits",
-    "high-yield savings accounts in 2025"
+    "how to invest your first $1000",
+    "passive income streams that actually work",
+    "backdoor Roth IRA strategy explained",
+    "side hustles that generate real income"
   ],
   "productivity": [
     "the Eisenhower Matrix for priority setting",
     "how to design a distraction-free workspace",
     "how to set goals that you actually achieve",
-    "the best apps for focus and concentration",
     "how to write faster and better",
-    "how to run meetings that actually end on time",
-    "automating your personal finances",
-    "the best keyboard shortcuts to save hours per week",
-    "the weekly review habit explained",
-    "time auditing — where your hours actually go",
-    "morning routines of high performers",
+    "reducing decision fatigue in daily life",
     "using AI tools to automate repetitive tasks",
-    "the Pomodoro technique and why it works"
+    "automating your personal finances"
   ],
   "tech": [
     "database indexing strategies for performance",
-    "how serverless architecture saves money",
-    "how HTTPS and TLS work under the hood",
-    "why TypeScript is taking over JavaScript"
+    "GraphQL vs REST — which to choose",
+    "edge computing vs cloud computing",
+    "zero-trust security architecture explained",
+    "how caching works — Redis and Memcached"
   ]
 }
