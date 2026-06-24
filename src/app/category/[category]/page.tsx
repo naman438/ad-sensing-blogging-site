@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!cat) return { title: 'Category Not Found' };
 
   const url = `${SITE_URL}/category/${cat.slug}`;
-  const desc = `AI-powered articles on ${cat.description}. Updated daily with fresh insights.`;
+  const desc = `In-depth articles on ${cat.description}. Updated daily with fresh insights.`;
 
   return {
     title: `${cat.label} Articles`,
@@ -62,7 +62,7 @@ export default async function CategoryPage({ params }: Props) {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
     name: `${cat.label} Articles`,
-    description: `AI-powered articles on ${cat.description}.`,
+    description: `In-depth articles on ${cat.description}.`,
     url: pageUrl,
     publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
     ...(posts.length > 0 && {

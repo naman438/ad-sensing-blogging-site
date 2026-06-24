@@ -7,8 +7,8 @@ export default function DisclaimerPage() {
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12">
       <h1 className="text-3xl font-bold text-gray-900 mb-6">Disclaimer</h1>
       <div className="prose max-w-none">
-        <h2>AI-Generated Content</h2>
-        <p>All articles published on SucceedStack are generated with artificial intelligence. While we strive for accuracy and quality, AI-generated content may contain errors, inaccuracies, or outdated information. Always verify important information from authoritative sources.</p>
+        <h2>Content Accuracy</h2>
+        <p>All articles published on SucceedStack are written for informational purposes. While we strive for accuracy and quality, content may contain errors, inaccuracies, or outdated information. Always verify important information from authoritative sources.</p>
 
         <h2>Not Professional Advice</h2>
         <p>Content on this website — including articles about finance, investing, technology, and other topics — is provided for informational and educational purposes only. It does not constitute:</p>

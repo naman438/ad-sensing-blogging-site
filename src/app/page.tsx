@@ -39,7 +39,7 @@ export default async function HomePage() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
         <section className="mb-10">
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">{SITE_NAME}</h1>
-          <p className="text-gray-500 text-lg">AI-generated insights on finance, tech, LLMs, and more — published daily.</p>
+          <p className="text-gray-500 text-lg">Expert insights on finance, tech, LLMs, and more — published daily.</p>
         </section>
 
         <AdUnit slot="1234567890" format="horizontal" className="mb-8 min-h-[90px]" />

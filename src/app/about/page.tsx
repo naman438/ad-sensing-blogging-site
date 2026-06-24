@@ -6,11 +6,11 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://succeedstack.com';
 
 export const metadata: Metadata = {
   title: 'About SucceedStack',
-  description: 'SucceedStack publishes daily AI-generated articles on finance, technology, AI & LLMs, crypto, and productivity to help you stay informed and make better decisions.',
+  description: 'SucceedStack publishes daily articles on finance, technology, AI & LLMs, crypto, and productivity to help you stay informed and make better decisions.',
   alternates: { canonical: `${SITE_URL}/about` },
   openGraph: {
     title: 'About SucceedStack',
-    description: 'Daily AI-generated insights on finance, technology, crypto, and productivity.',
+    description: 'Daily insights on finance, technology, crypto, and productivity.',
     url: `${SITE_URL}/about`,
   },
 };
@@ -57,7 +57,7 @@ export default function AboutPage() {
       <section className="mb-10">
         <h2 className="text-2xl font-semibold text-gray-800 mb-4">How We Create Content</h2>
         <p className="text-gray-600 leading-relaxed mb-4">
-          Articles on SucceedStack are generated using advanced AI language models and reviewed for quality and accuracy. Every article is written to be informative, well-structured, and easy to understand.
+          Every article on SucceedStack is researched, written, and reviewed for quality and accuracy. Every piece is crafted to be informative, well-structured, and easy to understand.
         </p>
         <p className="text-gray-600 leading-relaxed">
           All content is intended for general informational purposes only and should not be considered professional financial, legal, or investment advice. Please read our <Link href="/disclaimer" className="text-blue-600 hover:underline">disclaimer</Link> for more details.

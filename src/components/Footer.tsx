@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold text-lg mb-3">SucceedStack</h3>
             <p className="text-sm leading-relaxed">
-              AI-powered articles on finance, technology, LLMs, and more. Fresh insights published daily.
+              In-depth articles on finance, technology, LLMs, and more. Fresh insights published daily.
             </p>
           </div>
           <div>
@@ -35,7 +35,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-sm text-center">
-          <p>&copy; {new Date().getFullYear()} SucceedStack. Content generated with AI for informational purposes only.</p>
+          <p>&copy; {new Date().getFullYear()} SucceedStack. Content is for informational purposes only.</p>
         </div>
       </div>
     </footer>

@@ -7,7 +7,7 @@ export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: 'All Articles',
-  description: 'Browse all AI-generated articles on finance, LLMs, technology, crypto, and productivity.',
+  description: 'Browse all articles on finance, LLMs, technology, crypto, and productivity.',
 };
 
 export default async function BlogPage() {
@@ -16,7 +16,7 @@ export default async function BlogPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
       <h1 className="text-3xl font-bold text-gray-900 mb-2">All Articles</h1>
-      <p className="text-gray-500 mb-8">AI-powered insights published daily across multiple topics.</p>
+      <p className="text-gray-500 mb-8">Fresh insights published daily across multiple topics.</p>
 
       <AdUnit slot="1122334455" format="horizontal" className="mb-8 min-h-[90px]" />
 

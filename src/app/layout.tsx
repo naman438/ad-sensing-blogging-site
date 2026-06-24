@@ -7,7 +7,7 @@ import './globals.css';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://succeedstack.com';
 const SITE_NAME = 'SucceedStack';
-const SITE_DESC = 'Fresh AI-generated insights on finance, large language models, technology, crypto, and productivity. Published daily.';
+const SITE_DESC = 'Fresh daily insights on finance, large language models, technology, crypto, and productivity.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
