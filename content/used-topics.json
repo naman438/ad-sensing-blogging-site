@@ -45,6 +45,7 @@
     "GraphQL vs REST — which to choose",
     "edge computing vs cloud computing",
     "zero-trust security architecture explained",
-    "how caching works — Redis and Memcached"
+    "how caching works — Redis and Memcached",
+    "the state of WebSockets and real-time apps"
   ]
 }
