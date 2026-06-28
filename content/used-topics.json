@@ -8,7 +8,8 @@
     "AI guardrails and content moderation",
     "LLM evaluation benchmarks explained",
     "AI agents and autonomous task execution",
-    "small language models vs large ones"
+    "small language models vs large ones",
+    "cost of running LLMs in production"
   ],
   "crypto": [
     "central bank digital currencies vs crypto",
