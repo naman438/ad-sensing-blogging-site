@@ -354,8 +354,14 @@ async function generate(categorySlug) {
     model: MODEL,
     messages: [{
       role: 'user',
-      content: `Generate a compelling, specific blog post title about this topic: "${topicSeed}" (in the context of ${cat.label}).
-Return ONLY the title — no quotes, no explanation, no numbering. Make it engaging and SEO-friendly.`,
+      content: `Generate a compelling blog post title about this topic: "${topicSeed}" (in the context of ${cat.label}).
+
+Rules:
+- Do NOT start with "Unlocking", "Unleashing", "Mastering", "Revolutionizing", or "Harnessing"
+- Make it specific and practical — something a real person would search for
+- Keep it under 70 characters if possible
+- Sound like a helpful expert, not a marketing brochure
+- Return ONLY the title — no quotes, no explanation, no numbering`,
     }],
     max_tokens: 80,
     temperature: 0.85,
@@ -370,15 +376,50 @@ Return ONLY the title — no quotes, no explanation, no numbering. Make it engag
     messages: [
       {
         role: 'system',
-        content: `You are an expert writer and SEO specialist creating high-quality, authoritative blog articles that rank on Google. Write in a clear, engaging, human style with deep practical value. Use markdown: ## for H2 headers, ### for H3 sub-headers, **bold** for key terms, bullet lists and numbered lists. Aim for 900-1200 words.`,
+        content: `You are an experienced journalist and subject matter expert writing for a general audience. Your writing style is:
+- Conversational and engaging — like explaining to a smart friend
+- Direct and confident — no fluff, no filler sentences
+- Specific — use real numbers, real examples, real comparisons
+- Human — vary sentence length, use contractions, avoid robotic phrasing
+
+Formatting rules (STRICT):
+- Use ## for main section headers (4-6 sections)
+- Use ### for sub-sections (1-2 per article)
+- Use **bold** sparingly — maximum 8-10 bold phrases per article, only for truly critical terms
+- Use bullet points or numbered lists where they genuinely help
+- Do NOT bold every other phrase — this looks spammy
+- Target 1,100-1,400 words — longer articles rank better on Google
+- Write for an Indian and global English-speaking audience
+- For finance topics: include Indian context (SIP, mutual funds, SEBI, RBI, Indian tax rules) where relevant`,
       },
       {
         role: 'user',
-        content: `Write a complete, in-depth blog post titled: "${title}"\n\nCategory: ${cat.label}\nCore topic: ${topicSeed}\n\nSEO requirements:\n- Start with a compelling 2-3 sentence introduction that hooks the reader and includes the main keyword naturally\n- Use 4-6 ## section headers that include relevant keywords people search for\n- Under each header, write 2-4 paragraphs with specific examples, data points, or actionable steps\n- Include at least one ### sub-section under a main section\n- Add a "Key Takeaways" or "Bottom Line" section at the end\n- Use **bold** to highlight the most important terms\n- Do NOT include the title at the top\n- Do NOT add meta commentary like "In this article..." or "As an AI..."\n\nAfter the article write:\nEXCERPT: [2-sentence SEO meta description, 140-160 characters, includes main keyword]\nTAGS: [6 comma-separated keyword tags people actually search for]`,
+        content: `Write a complete, in-depth blog post titled: "${title}"
+
+Category: ${cat.label}
+Core topic: ${topicSeed}
+
+Requirements:
+- Open with a strong 2-3 sentence hook that immediately addresses the reader's pain point or curiosity
+- Do NOT start with "In this article" or "Are you looking for" — get straight to the point
+- Use 4-6 ## section headers with natural language (not keyword-stuffed)
+- Under each header write 2-4 paragraphs with specific data points, real examples, or step-by-step guidance
+- Include at least one ### sub-section
+- Add concrete numbers and comparisons wherever possible (e.g. "Index funds return 12-15% annually on average in India")
+- End with a practical "Bottom Line" or "Key Takeaways" section with 3-5 bullet points
+- For finance topics: make examples relevant to Indian investors (mention SIP, Zerodha, Groww, SEBI, etc. where natural)
+- For crypto topics: mention Indian exchanges and regulations where relevant
+- Do NOT include the title at the top of the article
+- Do NOT add commentary like "As an AI" or "In conclusion, it is clear that"
+- Write as if you are a knowledgeable person genuinely helping the reader
+
+After the article write:
+EXCERPT: [A natural 2-sentence description, 140-160 characters, includes the main keyword once]
+TAGS: [6 specific keyword phrases people actually search for, comma-separated]`,
       },
     ],
-    max_tokens: 3000,
-    temperature: 0.7,
+    max_tokens: 4000,
+    temperature: 0.75,
   });
 
   const raw = articleRes.choices[0].message.content ?? '';

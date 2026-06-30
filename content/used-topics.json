@@ -5,11 +5,7 @@
     "how transformer architecture powers modern AI",
     "LLMs for data analysis and insights",
     "real-time AI with streaming APIs",
-    "AI guardrails and content moderation",
-    "LLM evaluation benchmarks explained",
-    "AI agents and autonomous task execution",
-    "small language models vs large ones",
-    "cost of running LLMs in production"
+    "AI guardrails and content moderation"
   ],
   "crypto": [
     "central bank digital currencies vs crypto",
@@ -19,9 +15,7 @@
     "NFTs beyond art — real-world use cases",
     "how DAOs are changing organizational governance",
     "how to analyze on-chain data",
-    "crypto regulation — what is coming",
-    "institutional crypto adoption trends",
-    "NFT royalties and creator economics"
+    "crypto regulation — what is coming"
   ],
   "finance": [
     "understanding your credit score and how to improve it",
@@ -31,9 +25,7 @@
     "passive income streams that actually work",
     "backdoor Roth IRA strategy explained",
     "side hustles that generate real income",
-    "index fund investing for beginners",
-    "understanding P/E ratios and stock valuation",
-    "international diversification in your portfolio"
+    "how to build credit from scratch"
   ],
   "productivity": [
     "the Eisenhower Matrix for priority setting",
@@ -42,18 +34,13 @@
     "how to write faster and better",
     "reducing decision fatigue in daily life",
     "using AI tools to automate repetitive tasks",
-    "automating your personal finances",
-    "how to use templates to speed up repetitive work",
-    "the Pomodoro technique and why it works",
-    "inbox zero — realistic strategies that work"
+    "automating your personal finances"
   ],
   "tech": [
     "database indexing strategies for performance",
     "GraphQL vs REST — which to choose",
     "edge computing vs cloud computing",
     "zero-trust security architecture explained",
-    "how caching works — Redis and Memcached",
-    "the state of WebSockets and real-time apps",
-    "API design best practices in 2025"
+    "how caching works — Redis and Memcached"
   ]
 }
