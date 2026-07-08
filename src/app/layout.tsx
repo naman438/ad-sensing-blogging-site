@@ -12,13 +12,14 @@ const SITE_DESC = 'Fresh daily insights on finance, large language models, techn
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} — AI-Powered Articles on Finance, Tech & More`,
+    default: `${SITE_NAME} — Finance, Tech, Crypto & Productivity Insights`,
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESC,
   keywords: [
-    'AI blog', 'finance tips', 'LLM news', 'tech articles',
-    'productivity hacks', 'crypto guide', 'machine learning', 'investing',
+    'personal finance India', 'investing tips', 'crypto guide India',
+    'productivity tips', 'LLM news', 'tech articles', 'SIP investing',
+    'mutual funds', 'financial literacy', 'technology insights',
   ],
   authors: [{ name: SITE_NAME }],
   creator: SITE_NAME,
@@ -28,17 +29,22 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large' },
   },
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
   openGraph: {
     type: 'website',
     siteName: SITE_NAME,
-    title: `${SITE_NAME} — AI-Powered Articles on Finance, Tech & More`,
+    title: `${SITE_NAME} — Finance, Tech, Crypto & Productivity Insights`,
     description: SITE_DESC,
     url: SITE_URL,
-    locale: 'en_US',
+    locale: 'en_IN',
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${SITE_NAME} — AI-Powered Articles on Finance, Tech & More`,
+    title: `${SITE_NAME} — Finance, Tech, Crypto & Productivity Insights`,
     description: SITE_DESC,
   },
   alternates: { canonical: SITE_URL },

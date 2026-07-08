@@ -354,14 +354,16 @@ async function generate(categorySlug) {
     model: MODEL,
     messages: [{
       role: 'user',
-      content: `Generate a compelling blog post title about this topic: "${topicSeed}" (in the context of ${cat.label}).
+      content: `Write a blog post title about: "${topicSeed}" (${cat.label} category).
 
 Rules:
-- Do NOT start with "Unlocking", "Unleashing", "Mastering", "Revolutionizing", or "Harnessing"
-- Make it specific and practical — something a real person would search for
-- Keep it under 70 characters if possible
-- Sound like a helpful expert, not a marketing brochure
-- Return ONLY the title — no quotes, no explanation, no numbering`,
+- Do NOT start with: "Unlocking", "Unleashing", "Mastering", "Revolutionizing", "Harnessing", "Navigating", "Maximizing", "Leveraging", "Exploring", "Understanding", "Discovering"
+- Do NOT use numbers at the start ("10 Ways to...", "5 Tips for...", "7 Reasons why...")
+- No listicle format ("X Things You Need to Know About Y")
+- Keep it under 65 characters if possible
+- Sound like a real expert writing for curious readers — not a marketing brochure
+- Be specific and direct about what the reader will learn
+- Return ONLY the title — no quotes, no punctuation at end, no explanation`,
     }],
     max_tokens: 80,
     temperature: 0.85,
@@ -376,21 +378,29 @@ Rules:
     messages: [
       {
         role: 'system',
-        content: `You are an experienced journalist and subject matter expert writing for a general audience. Your writing style is:
-- Conversational and engaging — like explaining to a smart friend
-- Direct and confident — no fluff, no filler sentences
-- Specific — use real numbers, real examples, real comparisons
-- Human — vary sentence length, use contractions, avoid robotic phrasing
+        content: `You are a sharp, opinionated writer with genuine expertise in finance, technology, AI, and productivity. You write like a knowledgeable colleague sharing real insight — direct, specific, and genuinely useful to the reader.
 
-Formatting rules (STRICT):
-- Use ## for main section headers (4-6 sections)
-- Use ### for sub-sections (1-2 per article)
-- Use **bold** sparingly — maximum 8-10 bold phrases per article, only for truly critical terms
-- Use bullet points or numbered lists where they genuinely help
-- Do NOT bold every other phrase — this looks spammy
-- Target 1,100-1,400 words — longer articles rank better on Google
-- Write for an Indian and global English-speaking audience
-- For finance topics: include Indian context (SIP, mutual funds, SEBI, RBI, Indian tax rules) where relevant`,
+BANNED phrases (using any of these makes the article unpublishable):
+- "It is important to note", "It's worth noting", "It is crucial to understand"
+- "In today's rapidly evolving", "In the ever-changing landscape", "It cannot be overstated"
+- "In this article, we will", "Are you looking for", "Have you ever wondered"
+- "In conclusion", "To summarize", "As mentioned earlier", "As we have seen", "As discussed above"
+- Starting consecutive paragraphs with "Furthermore,", "Moreover,", "Additionally," — use once per article at most
+
+Formatting rules:
+- Use ## for 4-5 main sections, ### for 1-2 sub-sections
+- Write 2-4 paragraphs per section with real substance
+- Use **bold** for maximum 5-6 terms total per article — only genuinely technical or critical terms
+- End the article with a real conclusion paragraph (2-3 sentences) — NEVER a "Key Takeaways:" or "Bottom Line:" bullet list
+- Target 1,100-1,400 words
+- Vary sentence length — mix short punchy sentences with longer explanations
+- Use ₹ for Indian currency, reference Indian context naturally
+
+India context to weave in (not as a separate section, but naturally throughout):
+- Finance: SIP, CIBIL score, Zerodha, Groww, SEBI, NSE/BSE, PPF, NPS, ITR, FD interest rates
+- Crypto: WazirX, CoinDCX, CoinSwitch, RBI's stance, India's 30% flat crypto tax
+- Tech: Indian startup scene, Bengaluru tech hub, Indian FAANG engineers
+- Productivity: Indian work culture, remote work in India`,
       },
       {
         role: 'user',
@@ -400,21 +410,19 @@ Category: ${cat.label}
 Core topic: ${topicSeed}
 
 Requirements:
-- Open with a strong 2-3 sentence hook that immediately addresses the reader's pain point or curiosity
-- Do NOT start with "In this article" or "Are you looking for" — get straight to the point
-- Use 4-6 ## section headers with natural language (not keyword-stuffed)
-- Under each header write 2-4 paragraphs with specific data points, real examples, or step-by-step guidance
-- Include at least one ### sub-section
-- Add concrete numbers and comparisons wherever possible (e.g. "Index funds return 12-15% annually on average in India")
-- End with a practical "Bottom Line" or "Key Takeaways" section with 3-5 bullet points
-- For finance topics: make examples relevant to Indian investors (mention SIP, Zerodha, Groww, SEBI, etc. where natural)
-- For crypto topics: mention Indian exchanges and regulations where relevant
-- Do NOT include the title at the top of the article
-- Do NOT add commentary like "As an AI" or "In conclusion, it is clear that"
-- Write as if you are a knowledgeable person genuinely helping the reader
+- Start with a bold statement, a surprising fact, or a counterintuitive insight — 2-3 sentences max, no cliché openers
+- 4-5 ## section headers with natural conversational language
+- Each section: 2-4 paragraphs with specific data, real examples, or step-by-step guidance
+- Include at least one ### sub-section with deeper detail
+- Use real figures and comparisons throughout (e.g., "Index funds on NSE returned 12.3% CAGR over the last decade")
+- For finance topics: at least 2 India-specific references integrated naturally into the text
+- For crypto topics: mention Indian exchange or regulatory angle where it genuinely fits
+- End with a 2-3 sentence conclusion paragraph that gives the reader something to think about — absolutely no bullet list at the end
+- Do NOT include the article title at the top
+- Do NOT write as if you are an AI or add any meta-commentary about the article
 
-After the article write:
-EXCERPT: [A natural 2-sentence description, 140-160 characters, includes the main keyword once]
+After the article, on a new line, write:
+EXCERPT: [One natural 2-sentence description, 140-160 characters, includes the main keyword once]
 TAGS: [6 specific keyword phrases people actually search for, comma-separated]`,
       },
     ],

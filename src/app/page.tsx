@@ -15,6 +15,14 @@ export const metadata: Metadata = {
   alternates: { canonical: SITE_URL },
 };
 
+const CATEGORY_STYLES: Record<string, { gradient: string; emoji: string }> = {
+  llm:          { gradient: 'from-violet-500 to-purple-700', emoji: '🧠' },
+  finance:      { gradient: 'from-emerald-500 to-teal-700',  emoji: '📈' },
+  tech:         { gradient: 'from-blue-500 to-indigo-700',   emoji: '💻' },
+  crypto:       { gradient: 'from-orange-500 to-amber-600',  emoji: '₿'  },
+  productivity: { gradient: 'from-pink-500 to-rose-600',     emoji: '⚡' },
+};
+
 export default async function HomePage() {
   const posts = await getRecentPosts(9).catch(() => []);
   const [featured, ...rest] = posts;
@@ -37,34 +45,52 @@ export default async function HomePage() {
       {itemListSchema && <JsonLd data={itemListSchema} />}
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
-        <section className="mb-10">
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">{SITE_NAME}</h1>
-          <p className="text-gray-500 text-lg">Expert insights on finance, tech, LLMs, and more — published daily.</p>
+
+        {/* Hero */}
+        <section className="mb-10 rounded-2xl bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 px-8 py-12 text-white text-center relative overflow-hidden">
+          <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(circle, white 1.5px, transparent 1.5px)', backgroundSize: '24px 24px' }} />
+          <div className="relative z-10">
+            <h1 className="text-4xl sm:text-5xl font-bold mb-3 tracking-tight">{SITE_NAME}</h1>
+            <p className="text-blue-100 text-lg max-w-xl mx-auto leading-relaxed">
+              Expert insights on finance, technology, crypto, and productivity — published daily.
+            </p>
+          </div>
         </section>
 
         <AdUnit slot="1234567890" format="horizontal" className="mb-8 min-h-[90px]" />
 
+        {/* Categories */}
+        <section aria-label="Browse by topic" className="mb-10">
+          <h2 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">Browse by Topic</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+            {CATEGORIES.map((cat) => {
+              const style = CATEGORY_STYLES[cat.slug] ?? { gradient: 'from-gray-400 to-gray-600', emoji: '📝' };
+              return (
+                <Link
+                  key={cat.slug}
+                  href={`/category/${cat.slug}`}
+                  className={`group flex flex-col items-center gap-2 py-5 px-3 rounded-xl bg-gradient-to-br ${style.gradient} text-white hover:scale-105 hover:shadow-lg transition-all duration-200`}
+                >
+                  <span className="text-3xl">{style.emoji}</span>
+                  <span className="text-xs font-semibold uppercase tracking-wide text-center leading-tight">{cat.label}</span>
+                </Link>
+              );
+            })}
+          </div>
+        </section>
+
+        {/* Featured post */}
         {featured && (
           <section className="mb-10">
+            <h2 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">Featured</h2>
             <BlogCard post={featured} featured />
           </section>
         )}
 
-        <section aria-label="Browse by topic" className="mb-8 flex flex-wrap gap-2">
-          {CATEGORIES.map((cat) => (
-            <Link
-              key={cat.slug}
-              href={`/category/${cat.slug}`}
-              className="px-4 py-1.5 bg-white border border-gray-200 rounded-full text-sm text-gray-600 hover:border-blue-400 hover:text-blue-600 transition-colors"
-            >
-              {cat.label}
-            </Link>
-          ))}
-        </section>
-
+        {/* Recent articles */}
         {rest.length > 0 && (
           <section className="mb-10">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">Recent Articles</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-5">Recent Articles</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {rest.slice(0, 3).map((post) => (
                 <BlogCard key={post.id} post={post} />
@@ -87,16 +113,16 @@ export default async function HomePage() {
 
         {posts.length === 0 && (
           <div className="text-center py-20 text-gray-400">
-            <p className="text-lg">No posts yet — run <code className="bg-gray-100 px-2 py-0.5 rounded text-sm">npm run generate</code> to create your first article.</p>
+            <p className="text-lg">No posts yet — check back soon!</p>
           </div>
         )}
 
-        <div className="text-center">
+        <div className="text-center mt-4">
           <Link
             href="/blog"
-            className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+            className="inline-block px-8 py-3 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition-colors shadow-sm hover:shadow-md"
           >
-            View All Articles
+            View All Articles →
           </Link>
         </div>
       </div>
