@@ -1,14 +1,25 @@
-import Groq from 'groq-sdk';
+import { GoogleGenerativeAI } from '@google/generative-ai';
 import slugify from 'slugify';
 import { CATEGORIES, CATEGORY_TOPICS, type CategorySlug } from '@/types';
 
-let _groq: Groq | null = null;
-function getGroq() {
-  if (!_groq) _groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
-  return _groq;
-}
+const MODEL = 'gemini-2.5-flash';
 
-const MODEL = 'llama-3.3-70b-versatile';
+const SYSTEM_PROMPT = `You are a sharp, opinionated writer with genuine expertise in finance, technology, AI, and productivity. You write like a knowledgeable colleague sharing real insight — direct, specific, and genuinely useful to the reader.
+
+BANNED phrases (using any of these makes the article unpublishable):
+- "It is important to note", "It's worth noting", "It is crucial to understand"
+- "In today's rapidly evolving", "In the ever-changing landscape", "It cannot be overstated"
+- "In this article, we will", "Are you looking for", "Have you ever wondered"
+- "In conclusion", "To summarize", "As mentioned earlier", "As we have seen", "As discussed above"
+- Starting consecutive paragraphs with "Furthermore,", "Moreover,", "Additionally,"
+
+Formatting rules:
+- Use ## for 4-5 main sections, ### for 1-2 sub-sections
+- Write 2-4 paragraphs per section with real substance
+- Use **bold** for maximum 5-6 terms total per article
+- End with a real conclusion paragraph — NEVER a bullet list
+- Target 1,100-1,400 words
+- Use ₹ for Indian currency, reference Indian context naturally`;
 
 export interface GeneratedPost {
   title: string;
@@ -30,61 +41,53 @@ export async function generatePost(category: CategorySlug): Promise<GeneratedPos
   const categoryInfo = CATEGORIES.find((c) => c.slug === category);
   if (!categoryInfo) throw new Error(`Unknown category: ${category}`);
 
+  const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY ?? '');
   const topicSeed = pickTopic(category);
 
-  const topicPrompt = await getGroq().chat.completions.create({
+  const titleModel = genAI.getGenerativeModel({
     model: MODEL,
-    messages: [
-      {
-        role: 'user',
-        content: `Generate a compelling, specific blog post title about this topic: "${topicSeed}" (in the context of ${categoryInfo.label}).
-Return ONLY the title — no quotes, no explanation, no numbering. Make it engaging and SEO-friendly.`,
-      },
-    ],
-    max_tokens: 80,
-    temperature: 0.85,
+    generationConfig: { maxOutputTokens: 80, temperature: 0.85 },
   });
 
-  const title = topicPrompt.choices[0].message.content?.trim() ?? `${topicSeed} — Complete Guide`;
+  const titleResult = await titleModel.generateContent(
+    `Write a blog post title about: "${topicSeed}" (${categoryInfo.label} category).
+Rules:
+- Do NOT start with: "Unlocking", "Unleashing", "Mastering", "Revolutionizing", "Harnessing", "Navigating", "Maximizing", "Leveraging", "Exploring", "Understanding", "Discovering"
+- Do NOT use numbers at the start ("10 Ways to...", "5 Tips for...")
+- Keep it under 65 characters if possible
+- Return ONLY the title — no quotes, no punctuation at end, no explanation`
+  );
 
-  const articlePrompt = await getGroq().chat.completions.create({
+  const title = titleResult.response.text().trim() ?? `${topicSeed} — Complete Guide`;
+
+  const articleModel = genAI.getGenerativeModel({
     model: MODEL,
-    messages: [
-      {
-        role: 'system',
-        content: `You are an expert writer and SEO specialist creating high-quality, authoritative blog articles that rank on Google.
-Write in a clear, engaging, human style with deep practical value. Structure content for both readers and search engines.
-Use markdown: ## for H2 headers, ### for H3 headers, **bold** for key terms, bullet lists, and numbered lists where helpful.
-Aim for 900-1200 words — longer articles rank higher.`,
-      },
-      {
-        role: 'user',
-        content: `Write a complete, in-depth blog post titled: "${title}"
+    systemInstruction: SYSTEM_PROMPT,
+    generationConfig: { maxOutputTokens: 4000, temperature: 0.75 },
+  });
+
+  const articleResult = await articleModel.generateContent(
+    `Write a complete, in-depth blog post titled: "${title}"
 
 Category: ${categoryInfo.label}
 Core topic: ${topicSeed}
 
-SEO requirements:
-- Start with a compelling 2-3 sentence introduction that hooks the reader and includes the main keyword naturally
-- Use 4-6 ## section headers that include relevant keywords people search for
-- Under each header, write 2-4 paragraphs with specific examples, data points, or actionable steps
-- Include at least one ### sub-section under a main section
-- Add a "Key Takeaways" or "Bottom Line" section at the end
-- Use **bold** to highlight the most important terms and concepts
-- Do NOT include the title at the top (it's added separately)
-- Do NOT add meta commentary like "In this article..." or "As an AI..."
-- Write as a confident subject-matter expert
+Requirements:
+- Start with a bold statement or surprising fact — 2-3 sentences, no cliché openers
+- 4-5 ## section headers with natural conversational language
+- Each section: 2-4 paragraphs with specific data, real examples, or step-by-step guidance
+- Include at least one ### sub-section
+- Use real figures and comparisons throughout
+- For finance topics: at least 2 India-specific references integrated naturally
+- End with a 2-3 sentence conclusion paragraph — no bullet list
+- Do NOT include the article title at the top
 
-After the article, on a new line write:
-EXCERPT: [2-sentence SEO meta description, 140-160 characters, includes main keyword]
-TAGS: [6 comma-separated keyword tags people actually search for]`,
-      },
-    ],
-    max_tokens: 3000,
-    temperature: 0.7,
-  });
+After the article, on a new line, write:
+EXCERPT: [One natural 2-sentence description, 140-160 characters, includes the main keyword once]
+TAGS: [6 specific keyword phrases people actually search for, comma-separated]`
+  );
 
-  const raw = articlePrompt.choices[0].message.content ?? '';
+  const raw = articleResult.response.text() ?? '';
 
   const excerptMatch = raw.match(/EXCERPT:\s*([\s\S]+?)(?:\nTAGS:|$)/);
   const tagsMatch = raw.match(/TAGS:\s*(.+)$/m);
