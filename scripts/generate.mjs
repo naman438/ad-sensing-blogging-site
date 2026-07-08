@@ -6,7 +6,7 @@
  *   node scripts/generate.mjs llm 3        # 3 posts in llm category
  */
 
-import Groq from 'groq-sdk';
+import { GoogleGenerativeAI } from '@google/generative-ai';
 import slugify from 'slugify';
 import fs from 'fs';
 import path from 'path';
@@ -290,7 +290,7 @@ const CATEGORY_TOPICS = {
   ],
 };
 
-const MODEL = 'llama-3.3-70b-versatile';
+const MODEL = 'gemini-2.0-flash';
 
 // --- Topic tracker ---
 function loadTracker() {
@@ -342,43 +342,7 @@ function uniqueFilePath(slug, datePrefix) {
   return { filename, filepath };
 }
 
-async function generate(categorySlug) {
-  const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
-  const cat = CATEGORIES.find(c => c.slug === categorySlug);
-  if (!cat) throw new Error(`Unknown category: ${categorySlug}`);
-
-  const topicSeed = pickTopic(categorySlug);
-  console.log(`\n[groq] Category: ${cat.label} | Topic: "${topicSeed}"`);
-
-  const titleRes = await groq.chat.completions.create({
-    model: MODEL,
-    messages: [{
-      role: 'user',
-      content: `Write a blog post title about: "${topicSeed}" (${cat.label} category).
-
-Rules:
-- Do NOT start with: "Unlocking", "Unleashing", "Mastering", "Revolutionizing", "Harnessing", "Navigating", "Maximizing", "Leveraging", "Exploring", "Understanding", "Discovering"
-- Do NOT use numbers at the start ("10 Ways to...", "5 Tips for...", "7 Reasons why...")
-- No listicle format ("X Things You Need to Know About Y")
-- Keep it under 65 characters if possible
-- Sound like a real expert writing for curious readers — not a marketing brochure
-- Be specific and direct about what the reader will learn
-- Return ONLY the title — no quotes, no punctuation at end, no explanation`,
-    }],
-    max_tokens: 80,
-    temperature: 0.85,
-  });
-
-  const title = titleRes.choices[0].message.content?.trim() ?? `${topicSeed} — Complete Guide`;
-  console.log(`[groq] Title: "${title}"`);
-  console.log(`[groq] Writing article...`);
-
-  const articleRes = await groq.chat.completions.create({
-    model: MODEL,
-    messages: [
-      {
-        role: 'system',
-        content: `You are a sharp, opinionated writer with genuine expertise in finance, technology, AI, and productivity. You write like a knowledgeable colleague sharing real insight — direct, specific, and genuinely useful to the reader.
+const SYSTEM_PROMPT = `You are a sharp, opinionated writer with genuine expertise in finance, technology, AI, and productivity. You write like a knowledgeable colleague sharing real insight — direct, specific, and genuinely useful to the reader.
 
 BANNED phrases (using any of these makes the article unpublishable):
 - "It is important to note", "It's worth noting", "It is crucial to understand"
@@ -400,11 +364,48 @@ India context to weave in (not as a separate section, but naturally throughout):
 - Finance: SIP, CIBIL score, Zerodha, Groww, SEBI, NSE/BSE, PPF, NPS, ITR, FD interest rates
 - Crypto: WazirX, CoinDCX, CoinSwitch, RBI's stance, India's 30% flat crypto tax
 - Tech: Indian startup scene, Bengaluru tech hub, Indian FAANG engineers
-- Productivity: Indian work culture, remote work in India`,
-      },
-      {
-        role: 'user',
-        content: `Write a complete, in-depth blog post titled: "${title}"
+- Productivity: Indian work culture, remote work in India`;
+
+async function generate(categorySlug) {
+  const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+  const cat = CATEGORIES.find(c => c.slug === categorySlug);
+  if (!cat) throw new Error(`Unknown category: ${categorySlug}`);
+
+  const topicSeed = pickTopic(categorySlug);
+  console.log(`\n[gemini] Category: ${cat.label} | Topic: "${topicSeed}"`);
+
+  // Generate title
+  const titleModel = genAI.getGenerativeModel({
+    model: MODEL,
+    generationConfig: { maxOutputTokens: 80, temperature: 0.85 },
+  });
+
+  const titleResult = await titleModel.generateContent(
+    `Write a blog post title about: "${topicSeed}" (${cat.label} category).
+
+Rules:
+- Do NOT start with: "Unlocking", "Unleashing", "Mastering", "Revolutionizing", "Harnessing", "Navigating", "Maximizing", "Leveraging", "Exploring", "Understanding", "Discovering"
+- Do NOT use numbers at the start ("10 Ways to...", "5 Tips for...", "7 Reasons why...")
+- No listicle format ("X Things You Need to Know About Y")
+- Keep it under 65 characters if possible
+- Sound like a real expert writing for curious readers — not a marketing brochure
+- Be specific and direct about what the reader will learn
+- Return ONLY the title — no quotes, no punctuation at end, no explanation`
+  );
+
+  const title = titleResult.response.text().trim() ?? `${topicSeed} — Complete Guide`;
+  console.log(`[gemini] Title: "${title}"`);
+  console.log(`[gemini] Writing article...`);
+
+  // Generate article
+  const articleModel = genAI.getGenerativeModel({
+    model: MODEL,
+    systemInstruction: SYSTEM_PROMPT,
+    generationConfig: { maxOutputTokens: 4000, temperature: 0.75 },
+  });
+
+  const articleResult = await articleModel.generateContent(
+    `Write a complete, in-depth blog post titled: "${title}"
 
 Category: ${cat.label}
 Core topic: ${topicSeed}
@@ -423,14 +424,10 @@ Requirements:
 
 After the article, on a new line, write:
 EXCERPT: [One natural 2-sentence description, 140-160 characters, includes the main keyword once]
-TAGS: [6 specific keyword phrases people actually search for, comma-separated]`,
-      },
-    ],
-    max_tokens: 4000,
-    temperature: 0.75,
-  });
+TAGS: [6 specific keyword phrases people actually search for, comma-separated]`
+  );
 
-  const raw = articleRes.choices[0].message.content ?? '';
+  const raw = articleResult.response.text() ?? '';
   const excerptMatch = raw.match(/EXCERPT:\s*([\s\S]+?)(?:\nTAGS:|$)/);
   const tagsMatch = raw.match(/TAGS:\s*(.+)$/m);
   const content = raw.replace(/EXCERPT:[\s\S]*$/, '').trim();
