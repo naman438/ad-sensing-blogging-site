@@ -15,12 +15,12 @@ export const metadata: Metadata = {
   alternates: { canonical: SITE_URL },
 };
 
-const CATEGORY_STYLES: Record<string, { gradient: string; emoji: string }> = {
-  llm:          { gradient: 'from-violet-500 to-purple-700', emoji: '🧠' },
-  finance:      { gradient: 'from-emerald-500 to-teal-700',  emoji: '📈' },
-  tech:         { gradient: 'from-blue-500 to-indigo-700',   emoji: '💻' },
-  crypto:       { gradient: 'from-orange-500 to-amber-600',  emoji: '₿'  },
-  productivity: { gradient: 'from-pink-500 to-rose-600',     emoji: '⚡' },
+const CATEGORY_STYLES: Record<string, { gradient: string }> = {
+  llm:          { gradient: 'from-violet-500 to-purple-700' },
+  finance:      { gradient: 'from-emerald-500 to-teal-700'  },
+  tech:         { gradient: 'from-blue-500 to-indigo-700'   },
+  crypto:       { gradient: 'from-orange-500 to-amber-600'  },
+  productivity: { gradient: 'from-pink-500 to-rose-600'     },
 };
 
 export default async function HomePage() {
@@ -71,7 +71,6 @@ export default async function HomePage() {
                   href={`/category/${cat.slug}`}
                   className={`group flex flex-col items-center gap-2 py-5 px-3 rounded-xl bg-gradient-to-br ${style.gradient} text-white hover:scale-105 hover:shadow-lg transition-all duration-200`}
                 >
-                  <span className="text-3xl">{style.emoji}</span>
                   <span className="text-xs font-semibold uppercase tracking-wide text-center leading-tight">{cat.label}</span>
                 </Link>
               );
