@@ -9,7 +9,7 @@ function headingId(text: string) {
 }
 
 export function extractHeadings(markdown: string): Heading[] {
-  return markdown.split('\n').flatMap((line) => {
+  return markdown.split('\n').flatMap((line): Heading[] => {
     const h2 = line.match(/^## (.+)$/);
     const h3 = line.match(/^### (.+)$/);
     if (h2) return [{ level: 2 as const, text: h2[1], id: headingId(h2[1]) }];
