@@ -18,8 +18,8 @@ export default function Header() {
             <span className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">SucceedStack</span>
           </Link>
 
-          {/* Search */}
-          <form action="/search" method="get" className="hidden md:flex items-center">
+          {/* Search — only at lg+ to avoid overflow with nav links */}
+          <form action="/search" method="get" className="hidden lg:flex items-center">
             <div className="relative">
               <input
                 name="q"

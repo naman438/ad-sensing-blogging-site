@@ -6,6 +6,14 @@ import AdUnit from '@/components/AdUnit';
 import JsonLd from '@/components/JsonLd';
 import { CATEGORIES } from '@/types';
 
+const CATEGORY_GRADIENTS: Record<string, string> = {
+  llm:          'from-violet-600 via-violet-700 to-purple-800',
+  finance:      'from-emerald-600 via-emerald-700 to-teal-800',
+  tech:         'from-blue-600 via-blue-700 to-indigo-800',
+  crypto:       'from-orange-500 via-orange-600 to-amber-700',
+  productivity: 'from-pink-600 via-pink-700 to-rose-700',
+};
+
 export const revalidate = 3600;
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://succeedstack.com';
@@ -81,19 +89,19 @@ export default async function CategoryPage({ params }: Props) {
       <JsonLd data={collectionSchema} />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
-        <nav aria-label="Breadcrumb" className="text-sm text-gray-400 mb-6 flex items-center gap-2">
-          <a href={SITE_URL} className="hover:text-blue-600">Home</a>
-          <span aria-hidden>/</span>
-          <span className="text-gray-600">{cat.label}</span>
-        </nav>
-
-        <div className="mb-8">
-          <span className="inline-block bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide mb-3">
-            Topic
-          </span>
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">{cat.label}</h1>
-          <p className="text-gray-500">{cat.description}</p>
-        </div>
+        {/* Gradient category banner */}
+        <section className={`mb-8 rounded-2xl bg-gradient-to-br ${CATEGORY_GRADIENTS[category] ?? 'from-gray-600 to-gray-800'} px-5 py-10 sm:px-8 text-white relative overflow-hidden`}>
+          <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(circle, white 1.5px, transparent 1.5px)', backgroundSize: '24px 24px' }} />
+          <div className="relative z-10">
+            <nav aria-label="Breadcrumb" className="text-sm text-white/60 mb-4 flex items-center gap-2">
+              <a href={SITE_URL} className="hover:text-white transition-colors">Home</a>
+              <span aria-hidden>/</span>
+              <span className="text-white/90">{cat.label}</span>
+            </nav>
+            <h1 className="text-3xl sm:text-4xl font-bold mb-2">{cat.label}</h1>
+            <p className="text-white/80 text-base max-w-xl">{cat.description}</p>
+          </div>
+        </section>
 
         <AdUnit slot="2468013579" format="horizontal" className="mb-8 min-h-[90px]" />
 

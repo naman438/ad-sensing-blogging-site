@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { formatDistanceToNow, format } from 'date-fns';
 import { getPostBySlug, getRelatedPosts } from '@/lib/posts';
 import BlogCard from '@/components/BlogCard';
@@ -166,6 +167,19 @@ export default async function PostPage({ params }: Props) {
               </Link>
             )}
 
+            {post.image_url && (
+              <div className="relative w-full h-52 sm:h-72 rounded-xl overflow-hidden mb-6">
+                <Image
+                  src={post.image_url}
+                  alt={post.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 740px"
+                  priority
+                />
+              </div>
+            )}
+
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mb-4">
               {post.title}
             </h1>
@@ -242,7 +256,7 @@ export default async function PostPage({ params }: Props) {
         {related.length > 0 && (
           <section className="mt-14 pt-8 border-t border-gray-200">
             <h2 className="text-xl font-semibold text-gray-900 mb-5">Related Articles</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {related.map((p) => (
                 <BlogCard key={p.id} post={p} />
               ))}

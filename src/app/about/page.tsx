@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12">
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">About SucceedStack</h1>
+      <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">About SucceedStack</h1>
       <p className="text-lg text-gray-500 mb-10">Your daily source for insights on finance, technology, AI, crypto, and productivity.</p>
 
       <section className="mb-10">
