@@ -6,7 +6,13 @@
 }
 
 body {
-  background: #f0f4ff;
+  background-color: #f8f9ff;
+  background-image:
+    radial-gradient(ellipse at 10% 25%, rgba(99, 102, 241, 0.14) 0%, transparent 55%),
+    radial-gradient(ellipse at 88% 12%, rgba(139, 92, 246, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 55% 90%, rgba(16, 185, 129, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 75% 60%, rgba(59, 130, 246, 0.08) 0%, transparent 45%);
+  background-attachment: fixed;
   color: var(--foreground);
   font-family: system-ui, -apple-system, sans-serif;
 }
