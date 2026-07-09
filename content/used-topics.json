@@ -1,31 +1,12 @@
 {
   "llm": [
     "mixture of experts architecture in AI",
-    "multimodal AI models that process images and text",
-    "how transformer architecture powers modern AI",
-    "LLMs for data analysis and insights",
-    "real-time AI with streaming APIs",
-    "AI guardrails and content moderation",
-    "AI agents and autonomous task execution",
-    "LLM red-teaming and adversarial prompts",
-    "how search engines are integrating AI",
-    "LLM safety alignment and RLHF",
-    "AI for customer support — build vs buy"
+    "multimodal AI models that process images and text"
   ],
   "crypto": [
     "central bank digital currencies vs crypto",
     "how to evaluate a new crypto project",
-    "cross-chain bridges and interoperability",
-    "how to avoid crypto scams",
-    "NFTs beyond art — real-world use cases",
-    "how DAOs are changing organizational governance",
-    "how to analyze on-chain data",
-    "crypto regulation — what is coming",
-    "understanding crypto market cycles",
-    "DeFi lending protocols explained simply",
-    "what is tokenomics and why it matters",
-    "how the Lightning Network scales Bitcoin",
-    "understanding blockchain consensus mechanisms"
+    "cross-chain bridges and interoperability"
   ],
   "finance": [
     "understanding your credit score and how to improve it",
@@ -41,27 +22,8 @@
     "how to invest in index funds on autopilot",
     "the snowball method for paying off debt",
     "tax-loss harvesting strategies",
-    "the hidden costs of homeownership",
-    "rebalancing your portfolio — when and how"
+    "passive income streams that actually work for Indians"
   ],
-  "productivity": [
-    "the Eisenhower Matrix for priority setting",
-    "how to design a distraction-free workspace",
-    "how to set goals that you actually achieve",
-    "how to write faster and better",
-    "reducing decision fatigue in daily life",
-    "using AI tools to automate repetitive tasks",
-    "automating your personal finances",
-    "morning routines of high performers",
-    "how to prioritize when everything feels urgent"
-  ],
-  "tech": [
-    "database indexing strategies for performance",
-    "GraphQL vs REST — which to choose",
-    "edge computing vs cloud computing",
-    "zero-trust security architecture explained",
-    "how caching works — Redis and Memcached",
-    "microservices vs monolith architecture",
-    "the shift from cloud to edge computing"
-  ]
+  "productivity": [],
+  "tech": []
 }

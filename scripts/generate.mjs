@@ -81,56 +81,55 @@ const CATEGORY_TOPICS = {
     'the carbon footprint of training large AI models',
   ],
   finance: [
-    'index fund investing for beginners',
-    'how to build a 6-month emergency fund',
-    'Roth IRA vs traditional IRA decision guide',
-    'dollar-cost averaging in volatile markets',
-    'how inflation erodes savings over time',
-    'real estate vs stock market returns',
-    'understanding compound interest',
-    'tax-loss harvesting strategies',
-    'passive income streams that actually work',
-    'how to pay off debt fast using the avalanche method',
-    'high-yield savings accounts in 2025',
-    'dividend investing for long-term wealth',
-    'the 4% rule for early retirement',
+    'index fund investing for beginners in India',
+    'how to build a 6-month emergency fund in India',
+    'ELSS vs PPF — which is better for tax saving under Section 80C',
+    'dollar-cost averaging via SIP in volatile markets',
+    'how inflation erodes savings and what to do about it',
+    'real estate vs stock market returns in India',
+    'understanding compound interest with Indian examples',
+    'how to reduce tax liability on capital gains in India',
+    'passive income streams that actually work for Indians',
+    'how to pay off personal loan debt fast',
+    'best fixed deposit and liquid fund alternatives in India 2025',
+    'dividend investing for long-term wealth on NSE',
+    'FIRE movement in India — what is realistic',
     'how to read a company earnings report',
     'budgeting methods that work for busy people',
-    'understanding your credit score and how to improve it',
-    'how to negotiate a higher salary',
-    'the basics of options trading',
-    'ETFs vs mutual funds — which is better',
-    'how to invest your first $1000',
-    'side hustles that generate real income',
-    'understanding bond markets and interest rates',
-    'how to save for a house down payment',
+    'understanding CIBIL score and how to improve it fast',
+    'how to negotiate a higher salary in India',
+    'the basics of F&O trading on NSE',
+    'ETFs vs mutual funds — which is better for Indian investors',
+    'how to invest your first ₹10,000 wisely',
+    'side hustles that generate real income in India',
+    'understanding bond markets and G-Sec yields in India',
+    'how to save for a house down payment in Indian cities',
     'the psychology of money and spending habits',
-    'international diversification in your portfolio',
-    'how to protect wealth during a recession',
-    'small business tax deductions you might be missing',
-    'the FIRE movement explained',
-    'how to read a balance sheet',
-    'value investing vs growth investing',
+    'international diversification using Indian mutual funds',
+    'how to protect wealth during a market crash',
+    'Section 80C, 80D and other tax-saving options explained',
     'understanding P/E ratios and stock valuation',
-    'how to build a rental property portfolio',
-    'backdoor Roth IRA strategy explained',
-    'how to handle a financial windfall',
-    'the true cost of buying vs renting',
-    'asset allocation by age and risk tolerance',
-    'how to invest in index funds on autopilot',
-    'understanding Medicare and Social Security',
-    'tax-advantaged accounts beyond the 401k',
-    'how to build multiple income streams',
-    'the snowball method for paying off debt',
+    'how to build a rental property portfolio in India',
+    'NPS — how to use it for tax-efficient retirement',
+    'how to handle a financial windfall or inheritance in India',
+    'the true cost of buying vs renting in Indian metros',
+    'asset allocation by age and risk tolerance for Indians',
+    'how to invest in Nifty 50 index funds on autopilot',
+    'EPF and NPS — how retirement savings work in India',
+    'tax-saving investments beyond Section 80C',
+    'how to build multiple income streams as an Indian professional',
+    'avalanche vs snowball debt repayment — which works in India',
     'rebalancing your portfolio — when and how',
-    'how to evaluate REITs as an investment',
-    'understanding market cycles — bull vs bear',
+    'how to evaluate REITs listed on Indian exchanges',
+    'understanding market cycles — Sensex bull vs bear',
     'frugal living without feeling deprived',
-    'how to teach kids about money',
-    'the hidden costs of homeownership',
-    'how to build credit from scratch',
-    'understanding stock market volatility',
-    'investing during high inflation environments',
+    'how to teach kids about money — Indian parenting perspective',
+    'the hidden costs of homeownership in Indian cities',
+    'how to build credit from scratch with no credit history',
+    'understanding stock market volatility on BSE and NSE',
+    'investing during high inflation — strategies for Indian investors',
+    'sovereign gold bonds vs gold ETFs — which to buy',
+    'understanding Sebi rules for retail investors',
   ],
   tech: [
     'how Kubernetes simplifies container orchestration',
@@ -356,7 +355,7 @@ Formatting rules:
 - Write 2-4 paragraphs per section with real substance
 - Use **bold** for maximum 5-6 terms total per article — only genuinely technical or critical terms
 - End the article with a real conclusion paragraph (2-3 sentences) — NEVER a "Key Takeaways:" or "Bottom Line:" bullet list
-- Target 1,100-1,400 words
+- Target 1,500-1,800 words — every section must be substantive, not padded
 - Vary sentence length — mix short punchy sentences with longer explanations
 - Use ₹ for Indian currency, reference Indian context naturally
 
@@ -411,6 +410,24 @@ const CATEGORY_KEYWORDS = {
   productivity: 'productivity workspace office focus work',
 };
 
+async function geminiWithRetry(model, prompt, maxRetries = 4) {
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      return await model.generateContent(prompt);
+    } catch (err) {
+      const is429 = err?.message?.includes('429') || err?.message?.includes('quota');
+      const retryMs = err?.message?.match(/retryDelay.*?(\d+)s/)?.[1];
+      const waitMs = retryMs ? parseInt(retryMs) * 1000 : Math.min(30000 * attempt, 120000);
+      if (is429 && attempt < maxRetries) {
+        console.log(`[rate-limit] Quota hit — waiting ${waitMs / 1000}s before retry ${attempt + 1}/${maxRetries}...`);
+        await new Promise(r => setTimeout(r, waitMs));
+        continue;
+      }
+      throw err;
+    }
+  }
+}
+
 async function generate(categorySlug) {
   const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
   const cat = CATEGORIES.find(c => c.slug === categorySlug);
@@ -425,20 +442,27 @@ async function generate(categorySlug) {
     generationConfig: { maxOutputTokens: 80, temperature: 0.85 },
   });
 
-  const titleResult = await titleModel.generateContent(
-    `Write a blog post title about: "${topicSeed}" (${cat.label} category).
+  const titlePrompt = `Write a blog post title about: "${topicSeed}" (${cat.label} category).
 
 Rules:
-- Do NOT start with: "Unlocking", "Unleashing", "Mastering", "Revolutionizing", "Harnessing", "Navigating", "Maximizing", "Leveraging", "Exploring", "Understanding", "Discovering"
-- Do NOT use numbers at the start ("10 Ways to...", "5 Tips for...", "7 Reasons why...")
-- No listicle format ("X Things You Need to Know About Y")
-- Keep it under 65 characters if possible
-- Sound like a real expert writing for curious readers — not a marketing brochure
-- Be specific and direct about what the reader will learn
-- Return ONLY the title — no quotes, no punctuation at end, no explanation`
-  );
+- Must be 5-12 words — never shorter
+- Do NOT start with: "Unlocking", "Unleashing", "Mastering", "Revolutionizing", "Harnessing", "Navigating", "Maximizing", "Leveraging", "Exploring", "Discovering"
+- Do NOT use number lists ("10 Ways to...", "5 Tips for...")
+- No marketing fluff — sound like a knowledgeable colleague
+- Be specific about what the reader will learn
+- Respond with the title only — no quotes, no explanation, no punctuation at the very end`;
 
-  const title = titleResult.response.text().trim() ?? `${topicSeed} — Complete Guide`;
+  let title = '';
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    const titleResult = await geminiWithRetry(titleModel, titlePrompt);
+    const candidate = titleResult.response.text().trim().replace(/["']$/g, '').replace(/^["']/, '');
+    if (candidate && candidate.split(/\s+/).length >= 4) {
+      title = candidate;
+      break;
+    }
+    console.log(`[gemini] Title attempt ${attempt} too short ("${candidate}"), retrying...`);
+  }
+  if (!title) title = `${topicSeed.charAt(0).toUpperCase() + topicSeed.slice(1)} — A Complete Guide`;
   console.log(`[gemini] Title: "${title}"`);
   console.log(`[gemini] Writing article...`);
 
@@ -446,10 +470,10 @@ Rules:
   const articleModel = genAI.getGenerativeModel({
     model: MODEL,
     systemInstruction: SYSTEM_PROMPT,
-    generationConfig: { maxOutputTokens: 4000, temperature: 0.75 },
+    generationConfig: { maxOutputTokens: 6000, temperature: 0.75 },
   });
 
-  const articleResult = await articleModel.generateContent(
+  const articleResult = await geminiWithRetry(articleModel,
     `Write a complete, in-depth blog post titled: "${title}"
 
 Category: ${cat.label}
