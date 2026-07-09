@@ -26,6 +26,7 @@ body {
   color: #111827;
   border-left: 3px solid #2563EB;
   padding-left: 0.75rem;
+  scroll-margin-top: 84px;
 }
 
 .prose h3 {
@@ -34,6 +35,7 @@ body {
   margin-top: 1.75rem;
   margin-bottom: 0.625rem;
   color: #1f2937;
+  scroll-margin-top: 84px;
 }
 
 .prose p {
