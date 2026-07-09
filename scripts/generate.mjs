@@ -366,6 +366,33 @@ India context to weave in (not as a separate section, but naturally throughout):
 - Tech: Indian startup scene, Bengaluru tech hub, Indian FAANG engineers
 - Productivity: Indian work culture, remote work in India`;
 
+async function fetchPexelsImage(keywords) {
+  const apiKey = process.env.PEXELS_API_KEY;
+  if (!apiKey) return null;
+  try {
+    const query = encodeURIComponent(keywords);
+    const res = await fetch(`https://api.pexels.com/v1/search?query=${query}&per_page=15&orientation=landscape`, {
+      headers: { Authorization: apiKey },
+    });
+    if (!res.ok) return null;
+    const data = await res.json();
+    const photos = data.photos ?? [];
+    if (photos.length === 0) return null;
+    const photo = photos[Math.floor(Math.random() * photos.length)];
+    return photo.src.large2x ?? photo.src.large ?? photo.src.medium ?? null;
+  } catch {
+    return null;
+  }
+}
+
+const CATEGORY_KEYWORDS = {
+  finance:      'finance investing money stock market',
+  llm:          'artificial intelligence technology data science',
+  tech:         'technology software coding computer',
+  crypto:       'cryptocurrency blockchain digital currency bitcoin',
+  productivity: 'productivity workspace office focus work',
+};
+
 async function generate(categorySlug) {
   const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
   const cat = CATEGORIES.find(c => c.slug === categorySlug);
@@ -440,6 +467,12 @@ TAGS: [6 specific keyword phrases people actually search for, comma-separated]`
   const now = new Date().toISOString();
   const datePrefix = now.slice(0, 10);
 
+  // Fetch a relevant photo from Pexels
+  const imageKeywords = `${title} ${CATEGORY_KEYWORDS[categorySlug] ?? cat.label}`;
+  const imageUrl = await fetchPexelsImage(imageKeywords);
+  if (imageUrl) console.log(`[pexels] Image found for "${title}"`);
+  else console.log(`[pexels] No image found — using fallback`);
+
   const { filename, filepath } = uniqueFilePath(slug, datePrefix);
 
   const frontmatter = [
@@ -452,6 +485,7 @@ TAGS: [6 specific keyword phrases people actually search for, comma-separated]`
     `reading_time: ${reading_time}`,
     `created_at: "${now}"`,
     `updated_at: "${now}"`,
+    ...(imageUrl ? [`image_url: "${imageUrl}"`] : []),
     `published: true`,
     '---',
     '',

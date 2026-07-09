@@ -24,8 +24,8 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
   const style = CATEGORY_STYLES[post.category] ?? DEFAULT_STYLE;
   const timeAgo = formatDistanceToNow(new Date(post.created_at), { addSuffix: true });
 
-  // Unique photo per article based on slug
-  const photoUrl = `https://picsum.photos/seed/${post.slug}/800/450`;
+  // Use Pexels image if available, otherwise fall back to Picsum
+  const photoUrl = post.image_url ?? `https://picsum.photos/seed/${post.slug}/800/450`;
 
   if (featured) {
     return (

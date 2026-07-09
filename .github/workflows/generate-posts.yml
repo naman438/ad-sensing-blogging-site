@@ -29,6 +29,7 @@ jobs:
         run: node scripts/generate.mjs
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
 
       - name: Commit and push new post
         uses: stefanzweifel/git-auto-commit-action@v5

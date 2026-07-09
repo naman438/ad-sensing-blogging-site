@@ -10,6 +10,7 @@ export interface Post {
   published: boolean;
   created_at: string;
   updated_at: string;
+  image_url?: string;
 }
 
 export const CATEGORIES = [

@@ -26,6 +26,7 @@ function parsePost(filename: string): Post | null {
       published: data.published !== false,
       created_at: data.created_at ?? new Date().toISOString(),
       updated_at: data.updated_at ?? data.created_at ?? new Date().toISOString(),
+      image_url: data.image_url,
     };
   } catch {
     return null;
