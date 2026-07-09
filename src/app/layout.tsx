@@ -58,7 +58,7 @@ const websiteSchema = {
   description: SITE_DESC,
   potentialAction: {
     '@type': 'SearchAction',
-    target: { '@type': 'EntryPoint', urlTemplate: `${SITE_URL}/blog?q={search_term_string}` },
+    target: { '@type': 'EntryPoint', urlTemplate: `${SITE_URL}/search?q={search_term_string}` },
     'query-input': 'required name=search_term_string',
   },
 };
@@ -88,7 +88,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           />
         )}
       </head>
-      <body className="min-h-full flex flex-col bg-gray-50 antialiased">
+      <body className="min-h-full flex flex-col antialiased">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
