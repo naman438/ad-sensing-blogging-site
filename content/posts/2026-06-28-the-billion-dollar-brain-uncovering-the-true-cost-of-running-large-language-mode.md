@@ -7,7 +7,7 @@ tags: ["Large Language Models", "LLMs", "Natural Language Processing", "AI", "Ma
 reading_time: 4
 created_at: "2026-06-28T10:29:44.294Z"
 updated_at: "2026-06-28T10:29:44.294Z"
-image_url: "https://images.pexels.com/photos/18069694/pexels-photo-18069694.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+image_url: "https://images.pexels.com/photos/25626431/pexels-photo-25626431.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

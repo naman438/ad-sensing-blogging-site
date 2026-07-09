@@ -7,7 +7,7 @@ tags: ["transformer architecture", "large language models", "natural language pr
 reading_time: 5
 created_at: "2026-06-24T02:16:34.514Z"
 updated_at: "2026-06-24T02:16:34.514Z"
-image_url: "https://images.pexels.com/photos/18069694/pexels-photo-18069694.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+image_url: "https://images.pexels.com/photos/17485706/pexels-photo-17485706.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

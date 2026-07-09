@@ -7,7 +7,7 @@ tags: ["LLM evaluation benchmarks", "Artificial Intelligence", "Large Language M
 reading_time: 4
 created_at: "2026-06-24T10:53:07.728Z"
 updated_at: "2026-06-24T10:53:07.728Z"
-image_url: "https://images.pexels.com/photos/18069694/pexels-photo-18069694.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+image_url: "https://images.pexels.com/photos/30869149/pexels-photo-30869149.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 
