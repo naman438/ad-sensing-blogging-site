@@ -6,7 +6,7 @@
 }
 
 body {
-  background: var(--background);
+  background: #f0f4ff;
   color: var(--foreground);
   font-family: system-ui, -apple-system, sans-serif;
 }

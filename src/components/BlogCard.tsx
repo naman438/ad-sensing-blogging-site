@@ -74,7 +74,7 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
 
   return (
     <Link href={`/blog/${post.slug}`} className="group block h-full">
-      <article className="bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl hover:border-transparent hover:-translate-y-1 transition-all duration-200 h-full flex flex-col">
+      <article className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col border border-white/60">
         {/* Unique photo per article */}
         <div className="relative h-40 overflow-hidden flex-shrink-0">
           <Image
