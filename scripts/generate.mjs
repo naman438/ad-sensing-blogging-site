@@ -366,20 +366,38 @@ India context to weave in (not as a separate section, but naturally throughout):
 - Tech: Indian startup scene, Bengaluru tech hub, Indian FAANG engineers
 - Productivity: Indian work culture, remote work in India`;
 
-async function fetchPexelsImage(keywords) {
+function loadUsedImageUrls() {
+  const used = new Set();
+  try {
+    const files = fs.readdirSync(POSTS_DIR).filter(f => f.endsWith('.md'));
+    for (const file of files) {
+      const raw = fs.readFileSync(path.join(POSTS_DIR, file), 'utf-8');
+      const m = raw.match(/^image_url:\s*"(.+?)"\s*$/m);
+      if (m) used.add(m[1]);
+    }
+  } catch {}
+  return used;
+}
+
+async function fetchPexelsImage(keywords, usedUrls, page = 1) {
   const apiKey = process.env.PEXELS_API_KEY;
   if (!apiKey) return null;
   try {
     const query = encodeURIComponent(keywords);
-    const res = await fetch(`https://api.pexels.com/v1/search?query=${query}&per_page=15&orientation=landscape`, {
+    const res = await fetch(`https://api.pexels.com/v1/search?query=${query}&per_page=30&page=${page}&orientation=landscape`, {
       headers: { Authorization: apiKey },
     });
     if (!res.ok) return null;
     const data = await res.json();
     const photos = data.photos ?? [];
     if (photos.length === 0) return null;
-    const photo = photos[Math.floor(Math.random() * photos.length)];
-    return photo.src.large2x ?? photo.src.large ?? photo.src.medium ?? null;
+    const shuffled = photos.sort(() => Math.random() - 0.5);
+    for (const photo of shuffled) {
+      const url = photo.src.large2x ?? photo.src.large ?? photo.src.medium ?? null;
+      if (url && !usedUrls.has(url)) return url;
+    }
+    if (page < 3) return fetchPexelsImage(keywords, usedUrls, page + 1);
+    return null;
   } catch {
     return null;
   }
@@ -467,9 +485,10 @@ TAGS: [6 specific keyword phrases people actually search for, comma-separated]`
   const now = new Date().toISOString();
   const datePrefix = now.slice(0, 10);
 
-  // Fetch a relevant photo from Pexels
+  // Fetch a relevant photo from Pexels, avoiding already-used URLs
+  const usedImageUrls = loadUsedImageUrls();
   const imageKeywords = `${title} ${CATEGORY_KEYWORDS[categorySlug] ?? cat.label}`;
-  const imageUrl = await fetchPexelsImage(imageKeywords);
+  const imageUrl = await fetchPexelsImage(imageKeywords, usedImageUrls);
   if (imageUrl) console.log(`[pexels] Image found for "${title}"`);
   else console.log(`[pexels] No image found — using fallback`);
 
