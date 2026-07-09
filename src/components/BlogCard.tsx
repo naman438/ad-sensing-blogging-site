@@ -19,10 +19,15 @@ interface BlogCardProps {
   featured?: boolean;
 }
 
+function stripMarkdown(text: string) {
+  return text.replace(/\*\*(.+?)\*\*/g, '$1').replace(/\*(.+?)\*/g, '$1').replace(/`(.+?)`/g, '$1');
+}
+
 export default function BlogCard({ post, featured = false }: BlogCardProps) {
   const category = CATEGORIES.find((c) => c.slug === post.category);
   const style = CATEGORY_STYLES[post.category] ?? DEFAULT_STYLE;
   const timeAgo = formatDistanceToNow(new Date(post.created_at), { addSuffix: true });
+  const excerpt = stripMarkdown(post.excerpt);
 
   // Use Pexels image if available, otherwise fall back to Picsum
   const photoUrl = post.image_url ?? `https://picsum.photos/seed/${post.slug}/800/450`;
@@ -54,7 +59,7 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
               {post.title}
             </h2>
             <p className="text-white/70 text-sm leading-relaxed line-clamp-2 mb-3 max-w-2xl">
-              {post.excerpt}
+              {excerpt}
             </p>
             <div className="flex items-center gap-3 text-white/50 text-xs">
               <span>{timeAgo}</span>
@@ -79,8 +84,8 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
             className="object-cover group-hover:scale-105 transition-transform duration-500"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
           />
-          {/* Subtle category color overlay */}
-          <div className={`absolute inset-0 bg-gradient-to-br ${style.gradient} opacity-30`} />
+          {/* Very subtle category tint — just enough to hint at the brand color */}
+          <div className={`absolute inset-0 bg-gradient-to-br ${style.gradient} opacity-10`} />
           {/* Category badge */}
           <div className="absolute top-3 left-3">
             <span className={`inline-block bg-white/95 ${style.badgeText} text-xs font-semibold px-2.5 py-1 rounded-full uppercase tracking-wide shadow-sm`}>
@@ -94,7 +99,7 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
             {post.title}
           </h3>
           <p className="text-gray-500 text-xs leading-relaxed line-clamp-2 mb-3">
-            {post.excerpt}
+            {excerpt}
           </p>
           <div className="flex items-center gap-2 text-gray-400 text-xs mt-auto pt-2 border-t border-gray-50">
             <span>{timeAgo}</span>
