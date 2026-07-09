@@ -131,7 +131,7 @@ export default async function PostPage({ params }: Props) {
       {breadcrumbSchema && <JsonLd data={breadcrumbSchema} />}
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
-        <div className="flex gap-8">
+        <div className="flex gap-8 min-w-0">
           {/* Article */}
           <article className="flex-1 min-w-0">
             {/* Breadcrumb */}
@@ -156,7 +156,7 @@ export default async function PostPage({ params }: Props) {
               </Link>
             )}
 
-            <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight mb-4">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mb-4">
               {post.title}
             </h1>
 
