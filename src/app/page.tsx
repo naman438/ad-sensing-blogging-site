@@ -61,7 +61,7 @@ export default async function HomePage() {
               Published twice daily
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 tracking-tight">{SITE_NAME}</h1>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 tracking-tight">{SITE_NAME}</h1>
             <p className="text-blue-100 text-base sm:text-lg max-w-lg mx-auto leading-relaxed mb-8">
               Expert insights on finance, AI, technology, crypto &amp; productivity — fresh articles every day.
             </p>
