@@ -7,6 +7,7 @@ tags: ["Large Language Models", "LLMs", "Data Analysis", "Data-Driven Decisions"
 reading_time: 5
 created_at: "2026-06-24T02:16:40.747Z"
 updated_at: "2026-06-24T02:16:40.747Z"
+image_url: "https://images.pexels.com/photos/17485741/pexels-photo-17485741.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

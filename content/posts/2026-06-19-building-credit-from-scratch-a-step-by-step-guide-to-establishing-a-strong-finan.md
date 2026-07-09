@@ -7,6 +7,7 @@ tags: ["building credit from scratch", "credit score", "credit cards", "loans", 
 reading_time: 4
 created_at: "2026-06-19T12:09:26.008Z"
 updated_at: "2026-06-19T12:09:26.008Z"
+image_url: "https://images.pexels.com/photos/35118208/pexels-photo-35118208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

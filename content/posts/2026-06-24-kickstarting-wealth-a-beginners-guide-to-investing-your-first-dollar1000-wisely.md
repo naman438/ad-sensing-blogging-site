@@ -7,6 +7,7 @@ tags: ["investing for beginners", "how to invest $1000", "investment strategies"
 reading_time: 4
 created_at: "2026-06-24T02:16:56.290Z"
 updated_at: "2026-06-24T02:16:56.290Z"
+image_url: "https://images.pexels.com/photos/13397611/pexels-photo-13397611.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

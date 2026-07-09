@@ -7,6 +7,7 @@ tags: ["API design", "future-proof APIs", "API development", "API security", "AP
 reading_time: 3
 created_at: "2026-06-30T17:48:29.250Z"
 updated_at: "2026-06-30T17:48:29.250Z"
+image_url: "https://images.pexels.com/photos/6424583/pexels-photo-6424583.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

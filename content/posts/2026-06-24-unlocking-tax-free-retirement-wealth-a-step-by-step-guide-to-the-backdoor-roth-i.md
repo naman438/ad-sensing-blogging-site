@@ -7,6 +7,7 @@ tags: ["backdoor Roth IRA", "tax-free retirement wealth", "Roth IRA conversion",
 reading_time: 5
 created_at: "2026-06-24T02:17:11.255Z"
 updated_at: "2026-06-24T02:17:11.255Z"
+image_url: "https://images.pexels.com/photos/6289059/pexels-photo-6289059.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

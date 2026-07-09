@@ -7,6 +7,7 @@ tags: ["time management", "priority setting", "Eisenhower Matrix", "productivity
 reading_time: 4
 created_at: "2026-06-09T17:56:13.841Z"
 updated_at: "2026-06-09T17:56:13.841Z"
+image_url: "https://images.pexels.com/photos/7213433/pexels-photo-7213433.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

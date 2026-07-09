@@ -7,6 +7,7 @@ tags: ["LLM testing", "adversarial prompts", "AI security", "language models", "
 reading_time: 5
 created_at: "2026-07-02T17:39:51.023Z"
 updated_at: "2026-07-02T17:39:51.023Z"
+image_url: "https://images.pexels.com/photos/37709121/pexels-photo-37709121.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

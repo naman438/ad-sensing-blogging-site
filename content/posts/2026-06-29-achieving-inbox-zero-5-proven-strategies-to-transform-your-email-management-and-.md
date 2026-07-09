@@ -7,6 +7,7 @@ tags: ["inbox zero", "email management", "productivity", "email overload", "stre
 reading_time: 4
 created_at: "2026-06-29T18:04:51.619Z"
 updated_at: "2026-06-29T18:04:51.619Z"
+image_url: "https://images.pexels.com/photos/374831/pexels-photo-374831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

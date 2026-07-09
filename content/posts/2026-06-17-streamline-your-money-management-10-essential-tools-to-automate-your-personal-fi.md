@@ -7,6 +7,7 @@ tags: ["personal finance", "financial automation", "money management", "producti
 reading_time: 4
 created_at: "2026-06-17T18:11:08.518Z"
 updated_at: "2026-06-17T18:11:08.518Z"
+image_url: "https://images.pexels.com/photos/6927352/pexels-photo-6927352.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

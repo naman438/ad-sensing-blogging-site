@@ -7,6 +7,7 @@ tags: ["database indexing strategies", "faster query execution", "database perfo
 reading_time: 3
 created_at: "2026-06-10T11:41:05.839Z"
 updated_at: "2026-06-10T11:41:05.839Z"
+image_url: "https://images.pexels.com/photos/14553706/pexels-photo-14553706.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

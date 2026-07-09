@@ -7,6 +7,7 @@ tags: ["AI task automation", "robotic process automation", "artificial intellige
 reading_time: 4
 created_at: "2026-07-01T11:27:12.551Z"
 updated_at: "2026-07-01T11:27:12.551Z"
+image_url: "https://images.pexels.com/photos/8439091/pexels-photo-8439091.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

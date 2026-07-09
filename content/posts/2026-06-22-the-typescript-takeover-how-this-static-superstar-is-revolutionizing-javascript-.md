@@ -7,6 +7,7 @@ tags: ["TypeScript", "JavaScript", "static typing", "compile-time error checking
 reading_time: 5
 created_at: "2026-06-22T13:37:43.276Z"
 updated_at: "2026-06-22T13:37:43.276Z"
+image_url: "https://images.pexels.com/photos/270373/pexels-photo-270373.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

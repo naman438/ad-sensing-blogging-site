@@ -7,6 +7,7 @@ tags: ["Portfolio Rebalancing", "Asset Allocation", "Financial Planning", "Inves
 reading_time: 8
 created_at: "2026-07-08T17:06:07.464Z"
 updated_at: "2026-07-08T17:06:07.464Z"
+image_url: "https://images.pexels.com/photos/28682356/pexels-photo-28682356.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

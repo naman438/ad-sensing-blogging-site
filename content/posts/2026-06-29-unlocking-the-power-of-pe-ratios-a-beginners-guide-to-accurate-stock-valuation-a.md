@@ -7,6 +7,7 @@ tags: ["P/E ratio", "stock valuation", "investment decisions", "price-to-earning
 reading_time: 4
 created_at: "2026-06-29T12:37:29.999Z"
 updated_at: "2026-06-29T12:37:29.999Z"
+image_url: "https://images.pexels.com/photos/28682356/pexels-photo-28682356.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

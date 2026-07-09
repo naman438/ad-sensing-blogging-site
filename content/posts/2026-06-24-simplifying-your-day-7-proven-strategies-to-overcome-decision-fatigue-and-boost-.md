@@ -7,6 +7,7 @@ tags: ["decision fatigue", "productivity", "simplifying daily life", "prioritizi
 reading_time: 4
 created_at: "2026-06-24T02:18:28.675Z"
 updated_at: "2026-06-24T02:18:28.675Z"
+image_url: "https://images.pexels.com/photos/3184656/pexels-photo-3184656.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

@@ -7,6 +7,7 @@ tags: ["meeting productivity", "punctuality", "time management", "meeting effect
 reading_time: 4
 created_at: "2026-06-17T12:19:24.321Z"
 updated_at: "2026-06-17T12:19:24.321Z"
+image_url: "https://images.pexels.com/photos/7095/people-coffee-notes-tea.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

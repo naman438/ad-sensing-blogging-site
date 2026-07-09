@@ -7,6 +7,7 @@ tags: ["Pomodoro Technique", "productivity", "time management", "focus", "concen
 reading_time: 3
 created_at: "2026-06-27T10:11:58.013Z"
 updated_at: "2026-06-27T10:11:58.013Z"
+image_url: "https://images.pexels.com/photos/36713172/pexels-photo-36713172.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

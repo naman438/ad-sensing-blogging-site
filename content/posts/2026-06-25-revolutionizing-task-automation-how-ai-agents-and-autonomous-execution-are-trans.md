@@ -7,6 +7,7 @@ tags: ["AI agents", "autonomous execution", "large language models", "task autom
 reading_time: 4
 created_at: "2026-06-25T10:45:32.960Z"
 updated_at: "2026-06-25T10:45:32.960Z"
+image_url: "https://images.pexels.com/photos/270623/pexels-photo-270623.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

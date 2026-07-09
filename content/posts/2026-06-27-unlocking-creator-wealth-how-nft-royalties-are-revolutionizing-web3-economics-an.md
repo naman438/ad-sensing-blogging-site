@@ -7,6 +7,7 @@ tags: ["NFT royalties", "Web3 economics", "creator economics", "non-fungible tok
 reading_time: 4
 created_at: "2026-06-27T17:03:15.190Z"
 updated_at: "2026-06-27T17:03:15.190Z"
+image_url: "https://images.pexels.com/photos/5980740/pexels-photo-5980740.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

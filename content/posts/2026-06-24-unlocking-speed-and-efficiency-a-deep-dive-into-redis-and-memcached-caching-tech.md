@@ -7,6 +7,7 @@ tags: ["caching", "Redis", "Memcached", "web development", "performance optimiza
 reading_time: 4
 created_at: "2026-06-24T02:17:44.654Z"
 updated_at: "2026-06-24T02:17:44.654Z"
+image_url: "https://images.pexels.com/photos/4955393/pexels-photo-4955393.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

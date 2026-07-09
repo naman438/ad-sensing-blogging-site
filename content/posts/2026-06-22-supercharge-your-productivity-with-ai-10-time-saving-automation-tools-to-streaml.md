@@ -7,6 +7,7 @@ tags: ["productivity", "AI automation", "machine learning", "natural language pr
 reading_time: 4
 created_at: "2026-06-22T19:24:04.320Z"
 updated_at: "2026-06-22T19:24:04.320Z"
+image_url: "https://images.pexels.com/photos/36764803/pexels-photo-36764803.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

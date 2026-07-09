@@ -7,6 +7,7 @@ tags: ["AI guardrails", "large language models", "content moderation", "natural 
 reading_time: 4
 created_at: "2026-06-24T02:16:52.808Z"
 updated_at: "2026-06-24T02:16:52.808Z"
+image_url: "https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

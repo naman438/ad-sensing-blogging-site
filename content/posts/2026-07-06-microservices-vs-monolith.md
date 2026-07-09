@@ -7,6 +7,7 @@ tags: ["microservices architecture", "monolith architecture", "software developm
 reading_time: 4
 created_at: "2026-07-06T18:06:50.329Z"
 updated_at: "2026-07-06T18:06:50.329Z"
+image_url: "https://images.pexels.com/photos/34803988/pexels-photo-34803988.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

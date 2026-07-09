@@ -7,6 +7,7 @@ tags: ["index fund investing", "passive investing", "stock market index", "low-c
 reading_time: 5
 created_at: "2026-06-28T17:02:45.849Z"
 updated_at: "2026-06-28T17:02:45.849Z"
+image_url: "https://images.pexels.com/photos/5849564/pexels-photo-5849564.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

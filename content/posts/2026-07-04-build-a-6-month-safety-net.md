@@ -7,6 +7,7 @@ tags: ["emergency fund", "safety net", "financial stability", "budgeting", "savi
 reading_time: 4
 created_at: "2026-07-04T16:57:37.755Z"
 updated_at: "2026-07-04T16:57:37.755Z"
+image_url: "https://images.pexels.com/photos/28682355/pexels-photo-28682355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

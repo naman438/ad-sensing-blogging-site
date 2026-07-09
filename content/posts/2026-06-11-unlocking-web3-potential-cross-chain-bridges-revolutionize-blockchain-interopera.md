@@ -7,6 +7,7 @@ tags: ["cross-chain bridges", "blockchain interoperability", "cryptocurrency", "
 reading_time: 4
 created_at: "2026-06-11T18:44:01.472Z"
 updated_at: "2026-06-11T18:44:01.472Z"
+image_url: "https://images.pexels.com/photos/5980599/pexels-photo-5980599.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

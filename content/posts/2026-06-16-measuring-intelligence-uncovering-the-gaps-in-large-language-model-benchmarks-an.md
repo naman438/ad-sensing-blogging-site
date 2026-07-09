@@ -7,6 +7,7 @@ tags: ["Large Language Models", "LLM benchmarks", "AI development", "natural lan
 reading_time: 5
 created_at: "2026-06-16T19:30:36.844Z"
 updated_at: "2026-06-16T19:30:36.844Z"
+image_url: "https://images.pexels.com/photos/30855416/pexels-photo-30855416.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

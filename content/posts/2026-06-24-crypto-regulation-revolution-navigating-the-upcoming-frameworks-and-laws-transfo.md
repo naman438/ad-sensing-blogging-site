@@ -7,6 +7,7 @@ tags: ["crypto regulation", "Web3", "cryptocurrency", "blockchain", "regulatory 
 reading_time: 4
 created_at: "2026-06-24T02:18:13.223Z"
 updated_at: "2026-06-24T02:18:13.223Z"
+image_url: "https://images.pexels.com/photos/5980920/pexels-photo-5980920.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

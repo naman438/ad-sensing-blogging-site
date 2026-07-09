@@ -7,6 +7,7 @@ tags: ["DeFi lending", "cryptocurrency lending", "blockchain lending", "crypto i
 reading_time: 3
 created_at: "2026-07-04T10:13:04.795Z"
 updated_at: "2026-07-04T10:13:04.795Z"
+image_url: "https://images.pexels.com/photos/14832162/pexels-photo-14832162.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

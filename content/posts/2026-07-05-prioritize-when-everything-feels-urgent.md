@@ -7,6 +7,7 @@ tags: ["prioritization techniques", "time management", "productivity hacks", "Ei
 reading_time: 4
 created_at: "2026-07-05T17:01:32.762Z"
 updated_at: "2026-07-05T17:01:32.762Z"
+image_url: "https://images.pexels.com/photos/7278608/pexels-photo-7278608.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

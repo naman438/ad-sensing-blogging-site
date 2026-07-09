@@ -7,6 +7,7 @@ tags: ["high-yield savings accounts", "online banks", "credit unions", "interest
 reading_time: 4
 created_at: "2026-06-21T11:18:45.479Z"
 updated_at: "2026-06-21T11:18:45.479Z"
+image_url: "https://images.pexels.com/photos/18512943/pexels-photo-18512943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

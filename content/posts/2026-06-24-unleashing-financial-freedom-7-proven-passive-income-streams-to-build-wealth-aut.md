@@ -7,6 +7,7 @@ tags: ["passive income streams", "financial freedom", "real estate investing", "
 reading_time: 4
 created_at: "2026-06-24T02:17:03.006Z"
 updated_at: "2026-06-24T02:17:03.006Z"
+image_url: "https://images.pexels.com/photos/14902702/pexels-photo-14902702.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

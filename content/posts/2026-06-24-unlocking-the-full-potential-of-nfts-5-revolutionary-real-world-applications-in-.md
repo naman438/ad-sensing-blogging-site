@@ -7,6 +7,7 @@ tags: ["NFTs", "crypto", "Web3", "virtual real estate", "supply chain management
 reading_time: 4
 created_at: "2026-06-24T02:17:52.100Z"
 updated_at: "2026-06-24T02:17:52.100Z"
+image_url: "https://images.pexels.com/photos/9588219/pexels-photo-9588219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

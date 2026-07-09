@@ -7,6 +7,7 @@ tags: ["workflow templates", "productivity", "repetitive tasks", "efficiency", "
 reading_time: 4
 created_at: "2026-06-26T10:54:19.712Z"
 updated_at: "2026-06-26T10:54:19.712Z"
+image_url: "https://images.pexels.com/photos/7654133/pexels-photo-7654133.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

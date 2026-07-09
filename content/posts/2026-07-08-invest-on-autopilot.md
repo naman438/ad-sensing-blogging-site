@@ -7,6 +7,7 @@ tags: ["index funds", "autopilot investing", "SIP", "mutual funds", "stock marke
 reading_time: 4
 created_at: "2026-07-08T10:21:24.458Z"
 updated_at: "2026-07-08T10:21:24.458Z"
+image_url: "https://images.pexels.com/photos/17781647/pexels-photo-17781647.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

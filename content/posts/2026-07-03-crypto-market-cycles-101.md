@@ -7,6 +7,7 @@ tags: ["crypto market cycles", "bitcoin price", "cryptocurrency investment", "cr
 reading_time: 4
 created_at: "2026-07-03T10:38:57.501Z"
 updated_at: "2026-07-03T10:38:57.501Z"
+image_url: "https://images.pexels.com/photos/8369829/pexels-photo-8369829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

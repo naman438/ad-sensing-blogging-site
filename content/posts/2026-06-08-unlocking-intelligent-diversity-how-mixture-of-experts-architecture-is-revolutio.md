@@ -7,6 +7,7 @@ tags: ["mixture of experts", "large language models", "AI development", "neural 
 reading_time: 4
 created_at: "2026-06-08T12:36:33.954Z"
 updated_at: "2026-06-08T12:36:33.954Z"
+image_url: "https://images.pexels.com/photos/18069694/pexels-photo-18069694.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

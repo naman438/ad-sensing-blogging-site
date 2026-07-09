@@ -7,6 +7,7 @@ tags: ["DeFi liquidity provisioning", "impermanent loss", "crypto investors", "c
 reading_time: 4
 created_at: "2026-06-23T11:20:15.313Z"
 updated_at: "2026-06-23T11:20:15.313Z"
+image_url: "https://images.pexels.com/photos/6771764/pexels-photo-6771764.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

@@ -7,6 +7,7 @@ tags: ["time auditing", "time management", "productivity", "time tracking", "tim
 reading_time: 4
 created_at: "2026-06-20T17:19:57.447Z"
 updated_at: "2026-06-20T17:19:57.447Z"
+image_url: "https://images.pexels.com/photos/8670381/pexels-photo-8670381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

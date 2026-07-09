@@ -7,6 +7,7 @@ tags: ["morning routines", "productivity", "self-care", "goal setting", "motivat
 reading_time: 4
 created_at: "2026-07-02T10:43:25.160Z"
 updated_at: "2026-07-02T10:43:25.160Z"
+image_url: "https://images.pexels.com/photos/36730937/pexels-photo-36730937.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

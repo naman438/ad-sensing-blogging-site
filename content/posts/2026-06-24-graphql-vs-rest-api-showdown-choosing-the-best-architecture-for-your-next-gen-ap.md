@@ -7,6 +7,7 @@ tags: ["GraphQL", "REST API", "next-gen applications", "real-time data exchange"
 reading_time: 4
 created_at: "2026-06-24T02:17:21.048Z"
 updated_at: "2026-06-24T02:17:21.048Z"
+image_url: "https://images.pexels.com/photos/34803985/pexels-photo-34803985.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

@@ -7,6 +7,7 @@ tags: ["salary negotiation", "higher salary", "job offer", "market research", "c
 reading_time: 4
 created_at: "2026-07-01T17:49:27.273Z"
 updated_at: "2026-07-01T17:49:27.273Z"
+image_url: "https://images.pexels.com/photos/18066265/pexels-photo-18066265.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

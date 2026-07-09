@@ -7,6 +7,7 @@ tags: ["AI in search engines", "artificial intelligence", "search engine optimiz
 reading_time: 4
 created_at: "2026-07-03T17:17:53.296Z"
 updated_at: "2026-07-03T17:17:53.296Z"
+image_url: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

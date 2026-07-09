@@ -7,6 +7,7 @@ tags: ["morning routines", "productivity", "exercise", "mindfulness", "nutrition
 reading_time: 5
 created_at: "2026-06-21T17:23:08.150Z"
 updated_at: "2026-06-21T17:23:08.150Z"
+image_url: "https://images.pexels.com/photos/8473793/pexels-photo-8473793.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

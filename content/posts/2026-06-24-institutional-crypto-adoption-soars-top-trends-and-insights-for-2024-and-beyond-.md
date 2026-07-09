@@ -7,6 +7,7 @@ tags: ["crypto adoption", "institutional investors", "Web3 space", "blockchain t
 reading_time: 4
 created_at: "2026-06-24T17:49:19.612Z"
 updated_at: "2026-06-24T17:49:19.612Z"
+image_url: "https://images.pexels.com/photos/7267501/pexels-photo-7267501.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

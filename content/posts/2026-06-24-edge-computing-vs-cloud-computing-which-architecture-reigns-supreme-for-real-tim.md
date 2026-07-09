@@ -7,6 +7,7 @@ tags: ["edge computing", "cloud computing", "IoT applications", "real-time data 
 reading_time: 5
 created_at: "2026-06-24T02:17:28.392Z"
 updated_at: "2026-06-24T02:17:28.392Z"
+image_url: "https://images.pexels.com/photos/10845119/pexels-photo-10845119.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

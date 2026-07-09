@@ -7,6 +7,7 @@ tags: ["productivity apps", "focus and concentration", "boost productivity", "pr
 reading_time: 3
 created_at: "2026-06-14T17:14:32.560Z"
 updated_at: "2026-06-14T17:14:32.560Z"
+image_url: "https://images.pexels.com/photos/7657618/pexels-photo-7657618.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

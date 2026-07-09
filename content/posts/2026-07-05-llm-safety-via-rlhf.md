@@ -7,6 +7,7 @@ tags: ["LLM safety", "RLHF", "reinforcement learning", "human feedback", "AI ali
 reading_time: 4
 created_at: "2026-07-05T10:17:05.567Z"
 updated_at: "2026-07-05T10:17:05.567Z"
+image_url: "https://images.pexels.com/photos/8439005/pexels-photo-8439005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

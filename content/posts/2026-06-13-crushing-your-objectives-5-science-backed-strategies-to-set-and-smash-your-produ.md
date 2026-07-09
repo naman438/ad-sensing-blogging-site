@@ -7,6 +7,7 @@ tags: ["productivity goals", "time management", "goal setting", "motivation", "p
 reading_time: 4
 created_at: "2026-06-13T10:32:33.818Z"
 updated_at: "2026-06-13T10:32:33.818Z"
+image_url: "https://images.pexels.com/photos/7428220/pexels-photo-7428220.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

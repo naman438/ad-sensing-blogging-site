@@ -7,6 +7,7 @@ tags: ["Bitcoin scaling", "Lightning Network", "cryptocurrency", "blockchain tec
 reading_time: 5
 created_at: "2026-07-07T11:10:07.162Z"
 updated_at: "2026-07-07T11:10:07.162Z"
+image_url: "https://images.pexels.com/photos/5980213/pexels-photo-5980213.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

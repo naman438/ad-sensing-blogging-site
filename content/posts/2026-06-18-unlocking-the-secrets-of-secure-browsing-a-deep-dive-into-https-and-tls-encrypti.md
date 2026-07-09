@@ -7,6 +7,7 @@ tags: ["HTTPS", "TLS", "secure browsing", "encryption protocols", "website secur
 reading_time: 3
 created_at: "2026-06-18T11:52:52.464Z"
 updated_at: "2026-06-18T11:52:52.464Z"
+image_url: "https://images.pexels.com/photos/14000470/pexels-photo-14000470.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

@@ -7,6 +7,7 @@ tags: ["crypto projects", "Web3", "blockchain technology", "tokenomics", "regula
 reading_time: 5
 created_at: "2026-06-10T18:27:06.163Z"
 updated_at: "2026-06-10T18:27:06.163Z"
+image_url: "https://images.pexels.com/photos/8358133/pexels-photo-8358133.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

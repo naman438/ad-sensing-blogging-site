@@ -7,6 +7,7 @@ tags: ["automating personal finances", "boosting productivity", "financial freed
 reading_time: 4
 created_at: "2026-06-24T02:18:43.841Z"
 updated_at: "2026-06-24T02:18:43.841Z"
+image_url: "https://images.pexels.com/photos/8296979/pexels-photo-8296979.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

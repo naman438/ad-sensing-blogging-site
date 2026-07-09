@@ -7,6 +7,7 @@ tags: ["credit score", "FICO score", "credit report", "credit utilization ratio"
 reading_time: 5
 created_at: "2026-06-09T11:19:25.319Z"
 updated_at: "2026-06-09T11:19:25.319Z"
+image_url: "https://images.pexels.com/photos/32642489/pexels-photo-32642489.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

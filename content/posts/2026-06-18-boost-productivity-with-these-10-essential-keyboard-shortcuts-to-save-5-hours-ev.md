@@ -7,6 +7,7 @@ tags: ["keyboard shortcuts", "productivity", "windows shortcuts", "mac shortcuts
 reading_time: 4
 created_at: "2026-06-18T18:23:39.221Z"
 updated_at: "2026-06-18T18:23:39.221Z"
+image_url: "https://images.pexels.com/photos/6177559/pexels-photo-6177559.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

@@ -7,6 +7,7 @@ tags: ["side hustles", "financial freedom", "online business", "freelance writin
 reading_time: 4
 created_at: "2026-06-24T02:17:17.124Z"
 updated_at: "2026-06-24T02:17:17.124Z"
+image_url: "https://images.pexels.com/photos/5849556/pexels-photo-5849556.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

@@ -7,6 +7,7 @@ tags: ["dollar-cost averaging", "volatile markets", "investment strategy", "smar
 reading_time: 4
 created_at: "2026-06-14T10:50:18.026Z"
 updated_at: "2026-06-14T10:50:18.026Z"
+image_url: "https://images.pexels.com/photos/6801681/pexels-photo-6801681.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

@@ -7,6 +7,7 @@ tags: ["Roth IRA", "Traditional IRA", "retirement savings", "retirement planning
 reading_time: 5
 created_at: "2026-06-11T12:12:35.699Z"
 updated_at: "2026-06-11T12:12:35.699Z"
+image_url: "https://images.pexels.com/photos/5849583/pexels-photo-5849583.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

@@ -7,6 +7,7 @@ tags: ["AI support", "customer support", "AI-powered chatbots", "customer servic
 reading_time: 4
 created_at: "2026-07-07T17:54:26.793Z"
 updated_at: "2026-07-07T17:54:26.793Z"
+image_url: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

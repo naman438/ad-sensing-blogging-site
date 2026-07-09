@@ -7,6 +7,7 @@ tags: ["play-to-earn", "cryptocurrency", "Web3", "gaming", "NFTs", "blockchain"]
 reading_time: 4
 created_at: "2026-06-15T19:41:00.440Z"
 updated_at: "2026-06-15T19:41:00.440Z"
+image_url: "https://images.pexels.com/photos/7708818/pexels-photo-7708818.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

@@ -7,6 +7,7 @@ tags: ["central bank digital currencies", "cryptocurrencies", "Web3", "blockchai
 reading_time: 4
 created_at: "2026-06-08T18:21:55.354Z"
 updated_at: "2026-06-08T18:21:55.354Z"
+image_url: "https://images.pexels.com/photos/7267495/pexels-photo-7267495.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

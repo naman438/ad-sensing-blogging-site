@@ -7,6 +7,7 @@ tags: ["crypto security", "Web3 scams", "crypto assets", "crypto exchange", "blo
 reading_time: 3
 created_at: "2026-06-13T17:16:54.641Z"
 updated_at: "2026-06-13T17:16:54.641Z"
+image_url: "https://images.pexels.com/photos/8370330/pexels-photo-8370330.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

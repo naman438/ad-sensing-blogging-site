@@ -7,6 +7,7 @@ tags: ["multimodal AI models", "deep learning", "visual text understanding", "im
 reading_time: 4
 created_at: "2026-06-12T11:45:47.623Z"
 updated_at: "2026-06-12T11:45:47.623Z"
+image_url: "https://images.pexels.com/photos/17483871/pexels-photo-17483871.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

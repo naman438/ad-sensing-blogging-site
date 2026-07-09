@@ -7,6 +7,7 @@ tags: ["compact language models", "AI applications", "LLMs", "natural language p
 reading_time: 4
 created_at: "2026-06-25T18:05:33.285Z"
 updated_at: "2026-06-25T18:05:33.285Z"
+image_url: "https://images.pexels.com/photos/30855412/pexels-photo-30855412.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

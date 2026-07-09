@@ -7,6 +7,7 @@ tags: ["WebSockets", "real-time communication", "bi-directional data exchange", 
 reading_time: 4
 created_at: "2026-06-26T17:42:49.622Z"
 updated_at: "2026-06-26T17:42:49.622Z"
+image_url: "https://images.pexels.com/photos/270488/pexels-photo-270488.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

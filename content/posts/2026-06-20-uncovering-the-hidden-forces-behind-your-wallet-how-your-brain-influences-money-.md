@@ -7,6 +7,7 @@ tags: ["psychology of money", "emotional spending", "mental accounting", "cognit
 reading_time: 4
 created_at: "2026-06-20T10:34:55.289Z"
 updated_at: "2026-06-20T10:34:55.289Z"
+image_url: "https://images.pexels.com/photos/6214908/pexels-photo-6214908.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 

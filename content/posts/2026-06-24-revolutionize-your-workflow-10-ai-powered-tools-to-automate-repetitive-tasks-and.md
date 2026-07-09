@@ -7,6 +7,7 @@ tags: ["AI-powered tools", "automation", "productivity", "workflow", "artificial
 reading_time: 4
 created_at: "2026-06-24T02:18:35.660Z"
 updated_at: "2026-06-24T02:18:35.660Z"
+image_url: "https://images.pexels.com/photos/35719571/pexels-photo-35719571.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 published: true
 ---
 
