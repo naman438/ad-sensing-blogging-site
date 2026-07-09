@@ -6,6 +6,9 @@ import { getPostBySlug, getRelatedPosts } from '@/lib/posts';
 import BlogCard from '@/components/BlogCard';
 import AdUnit from '@/components/AdUnit';
 import JsonLd from '@/components/JsonLd';
+import TableOfContents, { extractHeadings } from '@/components/TableOfContents';
+import ReadingProgress from '@/components/ReadingProgress';
+import BackToTop from '@/components/BackToTop';
 import { CATEGORIES } from '@/types';
 
 export const revalidate = 3600;
@@ -95,10 +98,14 @@ function buildBreadcrumbSchema(post: Awaited<ReturnType<typeof getPostBySlug>>) 
   };
 }
 
+function headingId(text: string) {
+  return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
 function markdownToHtml(md: string): string {
   return md
-    .replace(/^## (.+)$/gm, '<h2>$1</h2>')
-    .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+    .replace(/^## (.+)$/gm, (_, t) => `<h2 id="${headingId(t)}">${t}</h2>`)
+    .replace(/^### (.+)$/gm, (_, t) => `<h3 id="${headingId(t)}">${t}</h3>`)
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     .replace(/\*(.+?)\*/g, '<em>$1</em>')
     .replace(/`([^`]+)`/g, '<code>$1</code>')
@@ -122,11 +129,14 @@ export default async function PostPage({ params }: Props) {
   const timeAgo = formatDistanceToNow(new Date(post.created_at), { addSuffix: true });
   const publishedDate = format(new Date(post.created_at), 'MMMM d, yyyy');
   const htmlContent = markdownToHtml(post.content);
+  const headings = extractHeadings(post.content);
   const articleSchema = buildArticleSchema(post);
   const breadcrumbSchema = buildBreadcrumbSchema(post);
 
   return (
     <>
+      <ReadingProgress />
+      <BackToTop />
       {articleSchema && <JsonLd data={articleSchema} />}
       {breadcrumbSchema && <JsonLd data={breadcrumbSchema} />}
 
@@ -221,8 +231,9 @@ export default async function PostPage({ params }: Props) {
           </article>
 
           {/* Sidebar */}
-          <aside className="hidden lg:block w-72 flex-shrink-0">
+          <aside className="hidden lg:block w-64 flex-shrink-0">
             <div className="sticky top-24">
+              <TableOfContents headings={headings} />
               <AdUnit slot="1357924680" format="vertical" className="mb-6 min-h-[600px]" />
             </div>
           </aside>

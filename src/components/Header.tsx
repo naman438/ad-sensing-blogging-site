@@ -18,6 +18,21 @@ export default function Header() {
             <span className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">SucceedStack</span>
           </Link>
 
+          {/* Search */}
+          <form action="/search" method="get" className="hidden md:flex items-center">
+            <div className="relative">
+              <input
+                name="q"
+                type="search"
+                placeholder="Search articles..."
+                className="w-48 lg:w-64 pl-9 pr-3 py-1.5 text-sm bg-gray-100 border border-transparent rounded-full focus:outline-none focus:border-blue-300 focus:bg-white transition-all"
+              />
+              <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" />
+              </svg>
+            </div>
+          </form>
+
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-1">
             {CATEGORIES.map((cat) => (
@@ -56,6 +71,19 @@ export default function Header() {
         {/* Mobile nav */}
         {menuOpen && (
           <nav className="md:hidden pb-3 flex flex-col gap-1">
+            <form action="/search" method="get" className="mb-2">
+              <div className="relative">
+                <input
+                  name="q"
+                  type="search"
+                  placeholder="Search articles..."
+                  className="w-full pl-9 pr-3 py-2 text-sm bg-gray-100 rounded-full focus:outline-none focus:bg-white border border-transparent focus:border-blue-300 transition-all"
+                />
+                <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" />
+                </svg>
+              </div>
+            </form>
             {CATEGORIES.map((cat) => (
               <Link
                 key={cat.slug}
