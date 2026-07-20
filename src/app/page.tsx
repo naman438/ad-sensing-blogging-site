@@ -4,6 +4,7 @@ import { getRecentPosts } from '@/lib/posts';
 import BlogCard from '@/components/BlogCard';
 import AdUnit from '@/components/AdUnit';
 import JsonLd from '@/components/JsonLd';
+import Newsletter from '@/components/Newsletter';
 import { CATEGORIES } from '@/types';
 
 export const revalidate = 3600;
@@ -139,6 +140,8 @@ export default async function HomePage() {
         )}
 
         <AdUnit slot="0987654321" format="rectangle" className="mb-10 min-h-[250px]" />
+
+        <Newsletter />
 
         {rest.length > 3 && (
           <section className="mb-10">

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getPostsByCategory } from '@/lib/posts';
-import BlogCard from '@/components/BlogCard';
+import PostGrid from '@/components/PostGrid';
 import AdUnit from '@/components/AdUnit';
 import JsonLd from '@/components/JsonLd';
 import { CATEGORIES } from '@/types';
@@ -54,7 +54,7 @@ export default async function CategoryPage({ params }: Props) {
   const cat = CATEGORIES.find((c) => c.slug === category);
   if (!cat) notFound();
 
-  const posts = await getPostsByCategory(category, 50).catch(() => []);
+  const posts = await getPostsByCategory(category, 200).catch(() => []);
   const pageUrl = `${SITE_URL}/category/${cat.slug}`;
 
   const breadcrumbSchema = {
@@ -108,11 +108,7 @@ export default async function CategoryPage({ params }: Props) {
         {posts.length === 0 ? (
           <p className="text-gray-400 text-center py-20">No articles in this category yet — check back soon!</p>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {posts.map((post) => (
-              <BlogCard key={post.id} post={post} />
-            ))}
-          </div>
+          <PostGrid posts={posts} />
         )}
       </div>
     </>

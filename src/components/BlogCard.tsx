@@ -74,7 +74,7 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
 
   return (
     <Link href={`/blog/${post.slug}`} className="group block h-full">
-      <article className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col border border-white/60">
+      <article className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col border border-white/60 dark:bg-gray-800 dark:border-gray-700">
         {/* Unique photo per article */}
         <div className="relative h-40 overflow-hidden flex-shrink-0">
           <Image
@@ -95,13 +95,13 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
         </div>
 
         <div className="p-4 flex flex-col flex-1">
-          <h3 className="font-semibold text-gray-900 text-sm leading-snug mb-2 group-hover:text-blue-600 transition-colors line-clamp-2 flex-1">
+          <h3 className="font-semibold text-gray-900 text-sm leading-snug mb-2 group-hover:text-blue-600 transition-colors line-clamp-2 flex-1 dark:text-gray-100">
             {post.title}
           </h3>
-          <p className="text-gray-500 text-xs leading-relaxed line-clamp-2 mb-3">
+          <p className="text-gray-500 text-xs leading-relaxed line-clamp-2 mb-3 dark:text-gray-400">
             {excerpt}
           </p>
-          <div className="flex items-center gap-2 text-gray-400 text-xs mt-auto pt-2 border-t border-gray-50">
+          <div className="flex items-center gap-2 text-gray-400 text-xs mt-auto pt-2 border-t border-gray-50 dark:border-gray-700">
             <span>{timeAgo}</span>
             <span aria-hidden>·</span>
             <span>{post.reading_time} min read</span>

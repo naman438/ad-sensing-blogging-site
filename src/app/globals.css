@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #f9fafb;
   --foreground: #111827;
@@ -130,4 +132,56 @@ body {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* ── Dark mode ── */
+.dark {
+  color-scheme: dark;
+}
+
+.dark body {
+  background-color: #0f172a;
+  background-image:
+    radial-gradient(ellipse at 10% 25%, rgba(99, 102, 241, 0.22) 0%, transparent 55%),
+    radial-gradient(ellipse at 88% 12%, rgba(139, 92, 246, 0.18) 0%, transparent 50%),
+    radial-gradient(ellipse at 55% 90%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 75% 60%, rgba(59, 130, 246, 0.1) 0%, transparent 45%);
+  color: #e2e8f0;
+}
+
+.dark .prose {
+  color: #94a3b8;
+}
+
+.dark .prose h2,
+.dark .prose h3 {
+  color: #f1f5f9;
+  border-color: #3b82f6;
+}
+
+.dark .prose p,
+.dark .prose li {
+  color: #94a3b8;
+}
+
+.dark .prose strong {
+  color: #f1f5f9;
+}
+
+.dark .prose code {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+.dark .prose pre {
+  background: #020617;
+}
+
+.dark .prose blockquote {
+  background: rgba(30, 58, 138, 0.25);
+  color: #93c5fd;
+}
+
+.dark .prose blockquote p {
+  color: #93c5fd;
 }

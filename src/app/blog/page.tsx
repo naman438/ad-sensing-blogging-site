@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getAllPosts } from '@/lib/posts';
-import BlogCard from '@/components/BlogCard';
+import PostGrid from '@/components/PostGrid';
 import AdUnit from '@/components/AdUnit';
 
 export const revalidate = 3600;
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default async function BlogPage() {
-  const posts = await getAllPosts(50).catch(() => []);
+  const posts = await getAllPosts(200).catch(() => []);
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
@@ -23,11 +23,7 @@ export default async function BlogPage() {
       {posts.length === 0 ? (
         <p className="text-gray-400 text-center py-20">No articles yet — check back soon!</p>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {posts.map((post) => (
-            <BlogCard key={post.id} post={post} />
-          ))}
-        </div>
+        <PostGrid posts={posts} />
       )}
     </div>
   );

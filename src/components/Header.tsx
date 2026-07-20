@@ -3,19 +3,20 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { CATEGORIES } from '@/types';
+import ThemeToggle from './ThemeToggle';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white/95 backdrop-blur-sm border-b border-gray-200/80 sticky top-0 z-50 shadow-sm">
+    <header className="bg-white/95 backdrop-blur-sm border-b border-gray-200/80 sticky top-0 z-50 shadow-sm dark:bg-gray-900/95 dark:border-gray-800">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2 group">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center text-white font-bold text-sm flex-shrink-0 group-hover:shadow-md transition-shadow">
               S
             </div>
-            <span className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">SucceedStack</span>
+            <span className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors dark:text-white">SucceedStack</span>
           </Link>
 
           {/* Search — only at lg+ to avoid overflow with nav links */}
@@ -25,7 +26,7 @@ export default function Header() {
                 name="q"
                 type="search"
                 placeholder="Search articles..."
-                className="w-48 lg:w-64 pl-9 pr-3 py-1.5 text-sm bg-gray-100 border border-transparent rounded-full focus:outline-none focus:border-blue-300 focus:bg-white transition-all"
+                className="w-48 lg:w-64 pl-9 pr-3 py-1.5 text-sm bg-gray-100 border border-transparent rounded-full focus:outline-none focus:border-blue-300 focus:bg-white transition-all dark:bg-gray-800 dark:text-gray-100 dark:placeholder-gray-500 dark:focus:bg-gray-700"
               />
               <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" />
@@ -39,22 +40,25 @@ export default function Header() {
               <Link
                 key={cat.slug}
                 href={`/category/${cat.slug}`}
-                className="px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors"
+                className="px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800"
               >
                 {cat.label}
               </Link>
             ))}
-            <Link href="/about" className="px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors">
+            <Link href="/about" className="px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800">
               About
             </Link>
-            <Link href="/contact" className="px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors">
+            <Link href="/contact" className="px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800">
               Contact
             </Link>
+            <ThemeToggle />
           </nav>
 
           {/* Mobile menu button */}
+          <div className="md:hidden flex items-center gap-1">
+            <ThemeToggle />
           <button
-            className="md:hidden p-2 rounded-md text-gray-600 hover:bg-gray-100"
+            className="p-2 rounded-md text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
@@ -66,6 +70,7 @@ export default function Header() {
               )}
             </svg>
           </button>
+          </div>
         </div>
 
         {/* Mobile nav */}
