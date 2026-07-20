@@ -36,7 +36,7 @@ export default function AdUnit({ slot, format = 'auto', className = '' }: AdUnit
   }
 
   return (
-    <div className={className}>
+    <div className={`dark:bg-gray-900 dark:rounded-lg overflow-hidden ${className}`}>
       <ins
         className="adsbygoogle"
         style={{ display: 'block' }}
