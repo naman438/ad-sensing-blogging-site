@@ -16,11 +16,11 @@ export const metadata: Metadata = {
 };
 
 const CATEGORY_META: Record<string, { gradient: string; icon: string }> = {
-  llm:          { gradient: 'from-violet-600 to-purple-800',  icon: '🤖' },
-  finance:      { gradient: 'from-emerald-600 to-teal-800',   icon: '📈' },
-  tech:         { gradient: 'from-blue-600 to-indigo-800',    icon: '💻' },
-  crypto:       { gradient: 'from-orange-500 to-amber-700',   icon: '₿' },
-  productivity: { gradient: 'from-pink-600 to-rose-700',      icon: '⚡' },
+  llm:          { gradient: 'from-violet-500 to-purple-700',  icon: '🤖' },
+  finance:      { gradient: 'from-emerald-500 to-teal-700',   icon: '📈' },
+  tech:         { gradient: 'from-blue-500 to-indigo-700',    icon: '💻' },
+  crypto:       { gradient: 'from-orange-400 to-amber-600',   icon: '₿'  },
+  productivity: { gradient: 'from-pink-500 to-rose-600',      icon: '⚡' },
 };
 
 export default async function HomePage() {
@@ -46,35 +46,28 @@ export default async function HomePage() {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
 
-        {/* Hero */}
-        <section className="mb-10 rounded-3xl bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-900 px-5 py-12 sm:px-10 sm:py-16 text-white text-center relative overflow-hidden">
-          {/* Dot grid texture */}
-          <div className="absolute inset-0 opacity-[0.07]" style={{ backgroundImage: 'radial-gradient(circle, white 1.5px, transparent 1.5px)', backgroundSize: '28px 28px' }} />
-          {/* Soft glow blobs */}
-          <div className="absolute top-0 right-0 w-72 h-72 bg-indigo-500 rounded-full blur-3xl opacity-20 -translate-y-1/2 translate-x-1/2" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-400 rounded-full blur-3xl opacity-20 translate-y-1/2 -translate-x-1/2" />
-
+        {/* Hero — glass card so gradient mesh shows through */}
+        <section className="mb-10 rounded-3xl bg-white/60 backdrop-blur-md border border-white shadow-2xl px-5 py-12 sm:px-10 sm:py-16 text-center relative overflow-hidden">
           <div className="relative z-10">
-            {/* Live badge */}
-            <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium text-blue-100 mb-5">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+            <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 px-3 py-1 rounded-full text-xs font-semibold text-blue-600 mb-5">
+              <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
               Published twice daily
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 tracking-tight">{SITE_NAME}</h1>
-            <p className="text-blue-100 text-base sm:text-lg max-w-lg mx-auto leading-relaxed mb-8">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 tracking-tight text-gray-900">{SITE_NAME}</h1>
+            <p className="text-gray-500 text-base sm:text-lg max-w-lg mx-auto leading-relaxed mb-8">
               Expert insights on finance, AI, technology, crypto &amp; productivity — fresh articles every day.
             </p>
 
-            <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-white/50 text-sm mb-8">
-              <span className="flex items-center gap-1.5"><span className="text-white/80 font-semibold">85+</span> Articles</span>
-              <span className="flex items-center gap-1.5"><span className="text-white/80 font-semibold">5</span> Topics</span>
-              <span className="flex items-center gap-1.5"><span className="text-white/80 font-semibold">Free</span> Always</span>
+            <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm text-gray-400 mb-8">
+              <span><span className="text-gray-800 font-bold">100+</span> Articles</span>
+              <span><span className="text-gray-800 font-bold">5</span> Topics</span>
+              <span><span className="text-gray-800 font-bold">Free</span> Always</span>
             </div>
 
             <Link
               href="/blog"
-              className="inline-block px-7 py-3 bg-white text-blue-700 rounded-full font-semibold text-sm hover:bg-blue-50 transition-colors shadow-lg hover:shadow-xl"
+              className="inline-block px-7 py-3 bg-blue-600 text-white rounded-full font-semibold text-sm hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg"
             >
               Browse All Articles →
             </Link>
@@ -83,7 +76,7 @@ export default async function HomePage() {
 
         <AdUnit slot="1234567890" format="horizontal" className="mb-10 min-h-[90px]" />
 
-        {/* Categories */}
+        {/* Categories — glass tiles matching hero */}
         <section aria-label="Browse by topic" className="mb-12">
           <div className="flex items-center justify-between mb-5">
             <h2 className="text-lg font-bold text-gray-900">Browse by Topic</h2>
@@ -91,17 +84,21 @@ export default async function HomePage() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
             {CATEGORIES.map((cat, index) => {
-              const meta = CATEGORY_META[cat.slug] ?? { gradient: 'from-gray-500 to-gray-700', icon: '📝' };
+              const meta = CATEGORY_META[cat.slug] ?? { gradient: 'from-gray-400 to-gray-600', icon: '📝' };
               const isOrphan = index === CATEGORIES.length - 1 && CATEGORIES.length % 2 !== 0;
               return (
                 <Link
                   key={cat.slug}
                   href={`/category/${cat.slug}`}
-                  className={`group flex flex-col items-center gap-3 py-7 px-3 rounded-2xl bg-gradient-to-br ${meta.gradient} text-white hover:scale-[1.03] hover:shadow-2xl transition-all duration-200 shadow-md ${isOrphan ? 'col-span-2 sm:col-span-1' : ''}`}
+                  className={`group flex flex-col gap-3 p-5 rounded-2xl bg-white/70 backdrop-blur-sm border border-white shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 ${isOrphan ? 'col-span-2 sm:col-span-1' : ''}`}
                 >
-                  <span className="text-3xl leading-none">{meta.icon}</span>
-                  <span className="text-xs font-bold uppercase tracking-wider text-center leading-tight">{cat.label}</span>
-                  <span className="text-white/60 text-xs text-center hidden sm:block leading-tight">{cat.description}</span>
+                  <div className={`w-11 h-11 rounded-xl bg-gradient-to-br ${meta.gradient} flex items-center justify-center text-xl shadow-sm flex-shrink-0`}>
+                    {meta.icon}
+                  </div>
+                  <div>
+                    <p className="font-bold text-gray-900 text-sm leading-tight">{cat.label}</p>
+                    <p className="text-gray-400 text-xs mt-1 leading-snug line-clamp-2">{cat.description}</p>
+                  </div>
                 </Link>
               );
             })}
