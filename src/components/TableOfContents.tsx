@@ -23,13 +23,13 @@ export default function TableOfContents({ headings }: { headings: Heading[] }) {
 
   return (
     <nav aria-label="Table of contents" className="mb-6">
-      <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">On this page</p>
+      <p className="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-3">On this page</p>
       <ul className="space-y-1.5">
         {headings.map((h) => (
           <li key={h.id} className={h.level === 3 ? 'pl-3' : ''}>
             <a
               href={`#${h.id}`}
-              className="text-sm text-gray-500 hover:text-blue-600 transition-colors leading-snug block line-clamp-2"
+              className="text-sm text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors leading-snug block line-clamp-2"
             >
               {h.text}
             </a>

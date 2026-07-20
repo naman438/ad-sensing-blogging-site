@@ -147,22 +147,22 @@ export default async function PostPage({ params }: Props) {
           {/* Article */}
           <article className="flex-1 min-w-0">
             {/* Breadcrumb */}
-            <nav aria-label="Breadcrumb" className="text-sm text-gray-400 mb-6 flex items-center gap-2 flex-wrap">
-              <Link href="/" className="hover:text-blue-600">Home</Link>
+            <nav aria-label="Breadcrumb" className="text-sm text-gray-400 dark:text-gray-500 mb-6 flex items-center gap-2 flex-wrap">
+              <Link href="/" className="hover:text-blue-600 dark:hover:text-blue-400">Home</Link>
               <span aria-hidden>/</span>
               {category && (
                 <>
-                  <Link href={`/category/${category.slug}`} className="hover:text-blue-600">{category.label}</Link>
+                  <Link href={`/category/${category.slug}`} className="hover:text-blue-600 dark:hover:text-blue-400">{category.label}</Link>
                   <span aria-hidden>/</span>
                 </>
               )}
-              <span className="text-gray-600 truncate max-w-xs">{post.title}</span>
+              <span className="text-gray-500 dark:text-gray-500 truncate max-w-xs">{post.title}</span>
             </nav>
 
             {category && (
               <Link
                 href={`/category/${category.slug}`}
-                className="inline-block bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide mb-4 hover:bg-blue-100 transition-colors"
+                className="inline-block bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide mb-4 hover:bg-blue-100 transition-colors dark:bg-blue-900/40 dark:text-blue-300 dark:hover:bg-blue-900/60"
               >
                 {category.label}
               </Link>
@@ -181,11 +181,11 @@ export default async function PostPage({ params }: Props) {
               </div>
             )}
 
-            <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold text-gray-900 leading-tight mb-4">
+            <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold text-gray-900 dark:text-white leading-tight mb-4">
               {post.title}
             </h1>
 
-            <div className="flex items-center gap-3 text-gray-400 text-sm mb-6 pb-6 border-b border-gray-200 flex-wrap">
+            <div className="flex items-center gap-3 text-gray-400 dark:text-gray-500 text-sm mb-6 pb-6 border-b border-gray-200 dark:border-gray-700 flex-wrap">
               <time dateTime={post.created_at} title={publishedDate}>{timeAgo}</time>
               <span aria-hidden>·</span>
               <span>{post.reading_time} min read</span>
@@ -194,7 +194,7 @@ export default async function PostPage({ params }: Props) {
                   <span aria-hidden>·</span>
                   <div className="flex gap-1 flex-wrap">
                     {post.tags.slice(0, 3).map((tag) => (
-                      <span key={tag} className="bg-gray-100 text-gray-500 px-2 py-0.5 rounded text-xs">{tag}</span>
+                      <span key={tag} className="bg-gray-100 text-gray-500 px-2 py-0.5 rounded text-xs dark:bg-gray-800 dark:text-gray-400">{tag}</span>
                     ))}
                   </div>
                 </>
@@ -211,8 +211,8 @@ export default async function PostPage({ params }: Props) {
             <AdUnit slot="9988776655" format="horizontal" className="mt-10 min-h-[60px] sm:min-h-[90px]" />
 
             {/* Social sharing */}
-            <div className="mt-10 pt-6 border-t border-gray-200">
-              <p className="text-xs sm:text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wide">Share this article</p>
+            <div className="mt-10 pt-6 border-t border-gray-200 dark:border-gray-700">
+              <p className="text-xs sm:text-sm font-semibold text-gray-500 dark:text-gray-400 mb-3 uppercase tracking-wide">Share this article</p>
               <div className="flex gap-2 sm:gap-3 flex-wrap">
                 <a
                   href={`https://wa.me/?text=${encodeURIComponent(post.title + ' — ' + SITE_URL + '/blog/' + post.slug)}`}
@@ -256,8 +256,8 @@ export default async function PostPage({ params }: Props) {
         </div>
 
         {related.length > 0 && (
-          <section className="mt-14 pt-8 border-t border-gray-200">
-            <h2 className="text-xl font-semibold text-gray-900 mb-5">Related Articles</h2>
+          <section className="mt-14 pt-8 border-t border-gray-200 dark:border-gray-700">
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-5">Related Articles</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {related.map((p) => (
                 <BlogCard key={p.id} post={p} />

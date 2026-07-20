@@ -54,20 +54,20 @@ export default async function HomePage() {
             <div className="w-[280px] sm:w-[500px] h-44 sm:h-64 bg-indigo-300/20 rounded-full blur-3xl" />
           </div>
           <div className="relative z-10">
-            <div className="inline-flex items-center gap-2 bg-white/80 border border-indigo-100 px-3 py-1 rounded-full text-xs font-semibold text-blue-600 mb-5 shadow-sm">
+            <div className="inline-flex items-center gap-2 bg-white/80 dark:bg-gray-800/80 border border-indigo-100 dark:border-gray-700 px-3 py-1 rounded-full text-xs font-semibold text-blue-600 dark:text-blue-400 mb-5 shadow-sm">
               <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
               Published twice daily
             </div>
 
-            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold mb-3 tracking-tight text-gray-900">{SITE_NAME}</h1>
-            <p className="text-gray-500 text-sm sm:text-base lg:text-lg max-w-lg mx-auto leading-relaxed mb-6">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold mb-3 tracking-tight text-gray-900 dark:text-white">{SITE_NAME}</h1>
+            <p className="text-gray-500 dark:text-gray-400 text-sm sm:text-base lg:text-lg max-w-lg mx-auto leading-relaxed mb-6">
               Expert insights on finance, AI, technology, crypto &amp; productivity — fresh articles every day.
             </p>
 
-            <div className="flex flex-wrap justify-center gap-x-5 sm:gap-x-8 gap-y-2 text-sm text-gray-400 mb-6">
-              <span><span className="text-gray-800 font-bold">100+</span> Articles</span>
-              <span><span className="text-gray-800 font-bold">5</span> Topics</span>
-              <span><span className="text-gray-800 font-bold">Free</span> Always</span>
+            <div className="flex flex-wrap justify-center gap-x-5 sm:gap-x-8 gap-y-2 text-sm text-gray-400 dark:text-gray-500 mb-6">
+              <span><span className="text-gray-800 dark:text-white font-bold">100+</span> Articles</span>
+              <span><span className="text-gray-800 dark:text-white font-bold">5</span> Topics</span>
+              <span><span className="text-gray-800 dark:text-white font-bold">Free</span> Always</span>
             </div>
 
             <Link
@@ -84,8 +84,8 @@ export default async function HomePage() {
         {/* Categories — glass tiles matching hero */}
         <section aria-label="Browse by topic" className="mb-12">
           <div className="flex items-center justify-between mb-5">
-            <h2 className="text-lg font-bold text-gray-900">Browse by Topic</h2>
-            <Link href="/blog" className="text-sm text-blue-600 hover:text-blue-700 font-medium">See all →</Link>
+            <h2 className="text-lg font-bold text-gray-900 dark:text-white">Browse by Topic</h2>
+            <Link href="/blog" className="text-sm text-blue-600 hover:text-blue-700 font-medium dark:text-blue-400">See all →</Link>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 sm:gap-3">
             {CATEGORIES.map((cat, index) => {
@@ -95,14 +95,14 @@ export default async function HomePage() {
                 <Link
                   key={cat.slug}
                   href={`/category/${cat.slug}`}
-                  className={`group flex flex-col gap-2 sm:gap-3 p-4 sm:p-5 rounded-2xl bg-white/70 backdrop-blur-sm border border-white shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 ${isOrphan ? 'col-span-2 sm:col-span-1' : ''}`}
+                  className={`group flex flex-col gap-2 sm:gap-3 p-4 sm:p-5 rounded-2xl bg-white/70 backdrop-blur-sm border border-white shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 dark:bg-gray-800/70 dark:border-gray-700 ${isOrphan ? 'col-span-2 sm:col-span-1' : ''}`}
                 >
                   <div className={`w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br ${meta.gradient} flex items-center justify-center text-lg sm:text-xl shadow-sm flex-shrink-0`}>
                     {meta.icon}
                   </div>
                   <div>
-                    <p className="font-bold text-gray-900 text-xs sm:text-sm leading-tight">{cat.label}</p>
-                    <p className="text-gray-400 text-xs mt-0.5 sm:mt-1 leading-snug line-clamp-2 hidden sm:block">{cat.description}</p>
+                    <p className="font-bold text-gray-900 dark:text-white text-xs sm:text-sm leading-tight">{cat.label}</p>
+                    <p className="text-gray-400 dark:text-gray-500 text-xs mt-0.5 sm:mt-1 leading-snug line-clamp-2 hidden sm:block">{cat.description}</p>
                   </div>
                 </Link>
               );
@@ -115,7 +115,7 @@ export default async function HomePage() {
           <section className="mb-10">
             <div className="flex items-center gap-3 mb-5">
               <span className="w-1 h-6 rounded-full bg-blue-600" />
-              <h2 className="text-lg font-bold text-gray-900">Featured Article</h2>
+              <h2 className="text-lg font-bold text-gray-900 dark:text-white">Featured Article</h2>
             </div>
             <BlogCard post={featured} featured />
           </section>
@@ -127,7 +127,7 @@ export default async function HomePage() {
             <div className="flex items-center justify-between mb-5">
               <div className="flex items-center gap-3">
                 <span className="w-1 h-6 rounded-full bg-blue-600" />
-                <h2 className="text-lg font-bold text-gray-900">Latest Articles</h2>
+                <h2 className="text-lg font-bold text-gray-900 dark:text-white">Latest Articles</h2>
               </div>
               <Link href="/blog" className="text-sm text-blue-600 hover:text-blue-700 font-medium">View all →</Link>
             </div>
