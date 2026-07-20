@@ -90,16 +90,16 @@ export default async function CategoryPage({ params }: Props) {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
         {/* Gradient category banner */}
-        <section className={`mb-8 rounded-2xl bg-gradient-to-br ${CATEGORY_GRADIENTS[category] ?? 'from-gray-600 to-gray-800'} px-5 py-10 sm:px-8 text-white relative overflow-hidden`}>
+        <section className={`mb-8 rounded-2xl bg-gradient-to-br ${CATEGORY_GRADIENTS[category] ?? 'from-gray-600 to-gray-800'} px-5 py-8 sm:py-10 sm:px-8 text-white relative overflow-hidden`}>
           <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(circle, white 1.5px, transparent 1.5px)', backgroundSize: '24px 24px' }} />
           <div className="relative z-10">
-            <nav aria-label="Breadcrumb" className="text-sm text-white/60 mb-4 flex items-center gap-2">
+            <nav aria-label="Breadcrumb" className="text-xs sm:text-sm text-white/60 mb-3 sm:mb-4 flex items-center gap-2">
               <a href={SITE_URL} className="hover:text-white transition-colors">Home</a>
               <span aria-hidden>/</span>
               <span className="text-white/90">{cat.label}</span>
             </nav>
-            <h1 className="text-3xl sm:text-4xl font-bold mb-2">{cat.label}</h1>
-            <p className="text-white/80 text-base max-w-xl">{cat.description}</p>
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2">{cat.label}</h1>
+            <p className="text-white/80 text-sm sm:text-base max-w-xl">{cat.description}</p>
           </div>
         </section>
 

@@ -143,7 +143,7 @@ export default async function PostPage({ params }: Props) {
       {breadcrumbSchema && <JsonLd data={breadcrumbSchema} />}
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
-        <div className="flex gap-8 min-w-0">
+        <div className="flex gap-5 sm:gap-8 min-w-0">
           {/* Article */}
           <article className="flex-1 min-w-0">
             {/* Breadcrumb */}
@@ -181,7 +181,7 @@ export default async function PostPage({ params }: Props) {
               </div>
             )}
 
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mb-4">
+            <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold text-gray-900 leading-tight mb-4">
               {post.title}
             </h1>
 
@@ -201,19 +201,19 @@ export default async function PostPage({ params }: Props) {
               )}
             </div>
 
-            <AdUnit slot="5544332211" format="rectangle" className="mb-8 min-h-[250px]" />
+            <AdUnit slot="5544332211" format="rectangle" className="mb-8 min-h-[200px] sm:min-h-[250px]" />
 
             <div
               className="prose max-w-none"
               dangerouslySetInnerHTML={{ __html: htmlContent }}
             />
 
-            <AdUnit slot="9988776655" format="horizontal" className="mt-10 min-h-[90px]" />
+            <AdUnit slot="9988776655" format="horizontal" className="mt-10 min-h-[60px] sm:min-h-[90px]" />
 
             {/* Social sharing */}
             <div className="mt-10 pt-6 border-t border-gray-200">
-              <p className="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wide">Share this article</p>
-              <div className="flex gap-3 flex-wrap">
+              <p className="text-xs sm:text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wide">Share this article</p>
+              <div className="flex gap-2 sm:gap-3 flex-wrap">
                 <a
                   href={`https://wa.me/?text=${encodeURIComponent(post.title + ' — ' + SITE_URL + '/blog/' + post.slug)}`}
                   target="_blank"
