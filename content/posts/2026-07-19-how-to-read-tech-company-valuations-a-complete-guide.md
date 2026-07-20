@@ -1,5 +1,5 @@
 ---
-title: "How to read tech company valuations — A Complete Guide"
+title: "How to read tech company valuations"
 slug: "how-to-read-tech-company-valuations-a-complete-guide"
 category: "tech"
 excerpt: "Reading tech company valuations isn't about simple P/E ratios; it's a nuanced art blending financial metrics with future potential. Understanding these unique valuation dynamics is crucial for investors."

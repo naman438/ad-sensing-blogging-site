@@ -1,5 +1,5 @@
 ---
-title: "How blockchain is used in healthcare — A Complete Guide"
+title: "How blockchain is used in healthcare"
 slug: "how-blockchain-is-used-in-healthcare-a-complete-guide"
 category: "crypto"
 excerpt: "Blockchain technology offers a powerful solution to healthcare's fragmented data and security issues, promising immutable patient records and enhanced supply chain integrity. This guide explores how blockchain is used in healthcare to empower patients and improve system efficiency."

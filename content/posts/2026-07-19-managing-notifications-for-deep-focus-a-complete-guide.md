@@ -1,5 +1,5 @@
 ---
-title: "Managing notifications for deep focus — A Complete Guide"
+title: "Managing notifications for deep focus"
 slug: "managing-notifications-for-deep-focus-a-complete-guide"
 category: "productivity"
 excerpt: "Constant notifications are eroding your focus. Learn to categorize digital noise, architect focus zones, and implement a \"deep focus\" protocol to reclaim your attention and enhance productivity."

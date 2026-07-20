@@ -1,5 +1,5 @@
 ---
-title: "Context window size and why it matters — A Complete Guide"
+title: "Context window size and why it matters"
 slug: "context-window-size-and-why-it-matters-a-complete-guide"
 category: "llm"
 excerpt: "The context window dictates an AI model's capacity to process information and maintain coherence. Understanding its mechanics is critical for building robust applications and getting more out of these powerful tools."

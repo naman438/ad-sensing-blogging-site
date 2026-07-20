@@ -1,5 +1,5 @@
 ---
-title: "Portfolio Rebalancing:"
+title: "When and How to Rebalance Your Portfolio"
 slug: "portfolio-rebalancing"
 category: "finance"
 excerpt: "Portfolio rebalancing is critical for managing risk and ensuring your investments align with your financial goals. Learn when and how to rebalance, considering India-specific tax implications."

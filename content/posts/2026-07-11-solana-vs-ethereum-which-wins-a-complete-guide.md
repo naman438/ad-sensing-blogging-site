@@ -1,5 +1,5 @@
 ---
-title: "Solana vs Ethereum — which wins — A Complete Guide"
+title: "Solana vs Ethereum — which wins"
 slug: "solana-vs-ethereum-which-wins-a-complete-guide"
 category: "crypto"
 excerpt: "The debate over Solana vs Ethereum isn't about one platform \"killing\" the other; it's about understanding their distinct designs and use cases. Each blockchain excels in different areas, catering to specific needs in the evolving Web3 landscape."

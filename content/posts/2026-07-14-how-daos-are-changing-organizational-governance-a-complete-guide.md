@@ -1,5 +1,5 @@
 ---
-title: "How DAOs are changing organizational governance — A Complete Guide"
+title: "How DAOs are changing organizational governance"
 slug: "how-daos-are-changing-organizational-governance-a-complete-guide"
 category: "crypto"
 excerpt: "DAOs are revolutionizing organizational governance by replacing traditional hierarchies with transparent, blockchain-powered decision-making. Learn how these decentralized entities are redefining collective ownership and treasury management."

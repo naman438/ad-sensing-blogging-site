@@ -1,5 +1,5 @@
 ---
-title: "Building a personal knowledge management system — A Complete Guide"
+title: "Building a personal knowledge management system"
 slug: "building-a-personal-knowledge-management-system-a-complete-guide"
 category: "productivity"
 excerpt: "Most people consume information passively, but a robust personal knowledge management system transforms raw data into actionable insight. Learn to capture, organize, distill, and express your knowledge effectively."

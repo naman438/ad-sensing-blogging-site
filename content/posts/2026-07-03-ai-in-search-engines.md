@@ -1,5 +1,5 @@
 ---
-title: "AI in Search Engines"
+title: "How AI Is Changing the Way Search Engines Work"
 slug: "ai-in-search-engines"
 category: "llm"
 excerpt: "AI is revolutionizing search engines, making them more accurate and personalized. AI in search engines is the future of online search."

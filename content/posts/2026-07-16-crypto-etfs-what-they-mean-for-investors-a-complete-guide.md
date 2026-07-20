@@ -1,5 +1,5 @@
 ---
-title: "Crypto ETFs — what they mean for investors — A Complete Guide"
+title: "Crypto ETFs — what they mean for investors"
 slug: "crypto-etfs-what-they-mean-for-investors-a-complete-guide"
 category: "crypto"
 excerpt: "Crypto ETFs offer a streamlined way for traditional investors to gain exposure to digital assets without direct ownership. Understanding these crypto ETFs and their implications is crucial for navigating this evolving market."

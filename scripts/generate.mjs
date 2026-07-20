@@ -439,30 +439,34 @@ async function generate(categorySlug) {
   // Generate title
   const titleModel = genAI.getGenerativeModel({
     model: MODEL,
-    generationConfig: { maxOutputTokens: 80, temperature: 0.85 },
+    generationConfig: { maxOutputTokens: 120, temperature: 0.85 },
   });
 
   const titlePrompt = `Write a blog post title about: "${topicSeed}" (${cat.label} category).
 
 Rules:
-- Must be 5-12 words — never shorter
-- Do NOT start with: "Unlocking", "Unleashing", "Mastering", "Revolutionizing", "Harnessing", "Navigating", "Maximizing", "Leveraging", "Exploring", "Discovering"
+- Must be 5-12 words — never shorter, never longer
+- Do NOT start with: "Unlocking", "Unleashing", "Mastering", "Revolutionizing", "Harnessing", "Navigating", "Maximizing", "Leveraging", "Exploring", "Discovering", "Supercharge", "Boost"
 - Do NOT use number lists ("10 Ways to...", "5 Tips for...")
-- No marketing fluff — sound like a knowledgeable colleague
+- Do NOT end with or include: "A Complete Guide", "A Step-by-Step Guide", "Explained Simply", "For Beginners"
+- No marketing fluff — sound like a knowledgeable colleague talking to a peer
 - Be specific about what the reader will learn
 - Respond with the title only — no quotes, no explanation, no punctuation at the very end`;
 
   let title = '';
   for (let attempt = 1; attempt <= 3; attempt++) {
     const titleResult = await geminiWithRetry(titleModel, titlePrompt);
-    const candidate = titleResult.response.text().trim().replace(/["']$/g, '').replace(/^["']/, '');
+    const candidate = titleResult.response.text().trim().replace(/["']$/g, '').replace(/^["']/, '').replace(/\s*—?\s*A Complete Guide\.?$/i, '').replace(/\s*—?\s*A Step-by-Step Guide\.?$/i, '');
     if (candidate && candidate.split(/\s+/).length >= 4) {
       title = candidate;
       break;
     }
     console.log(`[gemini] Title attempt ${attempt} too short ("${candidate}"), retrying...`);
   }
-  if (!title) title = `${topicSeed.charAt(0).toUpperCase() + topicSeed.slice(1)} — A Complete Guide`;
+  if (!title) {
+    // Fallback: convert topic seed to a natural title (no "A Complete Guide")
+    title = topicSeed.charAt(0).toUpperCase() + topicSeed.slice(1);
+  }
   console.log(`[gemini] Title: "${title}"`);
   console.log(`[gemini] Writing article...`);
 

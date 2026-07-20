@@ -1,5 +1,5 @@
 ---
-title: "The role of oracles in blockchain — A Complete Guide"
+title: "The role of oracles in blockchain"
 slug: "the-role-of-oracles-in-blockchain-a-complete-guide"
 category: "crypto"
 excerpt: "Blockchains are digital islands, blind to real-world data. Oracles provide the critical bridge, securely feeding external information to smart contracts, enabling them to interact with the world."

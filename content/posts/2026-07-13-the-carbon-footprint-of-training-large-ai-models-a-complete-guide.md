@@ -1,5 +1,5 @@
 ---
-title: "The carbon footprint of training large AI models — A Complete Guide"
+title: "The carbon footprint of training large AI models"
 slug: "the-carbon-footprint-of-training-large-ai-models-a-complete-guide"
 category: "llm"
 excerpt: "Training large AI models carries a significant carbon footprint, comparable to years of vehicle emissions. Understanding and mitigating the carbon footprint of training large AI models is crucial for sustainable technology."

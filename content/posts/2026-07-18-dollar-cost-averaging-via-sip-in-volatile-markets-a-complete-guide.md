@@ -1,5 +1,5 @@
 ---
-title: "Dollar-cost averaging via SIP in volatile markets — A Complete Guide"
+title: "Dollar-cost averaging via SIP in volatile markets"
 slug: "dollar-cost-averaging-via-sip-in-volatile-markets-a-complete-guide"
 category: "finance"
 excerpt: "Most investors fail at timing the market, leading to suboptimal returns. Dollar-cost averaging via SIP offers a disciplined alternative, turning market volatility into an advantage for long-term wealth creation."

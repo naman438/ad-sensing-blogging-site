@@ -1,5 +1,5 @@
 ---
-title: "The Science Behind Your"
+title: "The Science Behind Recommender Systems"
 slug: "the-science-behind-your"
 category: "tech"
 excerpt: "Recommender systems silently shape your digital world, from shopping to entertainment. Understanding the science behind these personalization engines reveals how algorithms curate your online experience."

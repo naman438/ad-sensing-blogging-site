@@ -1,5 +1,5 @@
 ---
-title: "AI in healthcare — opportunities and risks — A Complete Guide"
+title: "AI in healthcare — opportunities and risks"
 slug: "ai-in-healthcare-opportunities-and-risks-a-complete-guide"
 category: "llm"
 excerpt: "AI is revolutionizing healthcare, enhancing diagnosis, treatment, and operational efficiency, but it also introduces significant risks like data privacy breaches and algorithmic bias. A complete guide to AI in healthcare covers both its vast opportunities and critical challenges."

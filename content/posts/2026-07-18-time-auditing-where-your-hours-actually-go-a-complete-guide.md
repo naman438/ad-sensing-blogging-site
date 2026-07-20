@@ -1,5 +1,5 @@
 ---
-title: "Time auditing — where your hours actually go — A Complete Guide"
+title: "Time auditing — where your hours actually go"
 slug: "time-auditing-where-your-hours-actually-go-a-complete-guide"
 category: "productivity"
 excerpt: "A time audit reveals where your hours truly go, exposing hidden distractions and low-value activities that steal your productivity. Learn to track, analyze, and reclaim your time for what truly matters."

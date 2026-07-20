@@ -1,5 +1,5 @@
 ---
-title: "How to invest in Nifty 50 index funds on autopilot — A Complete Guide"
+title: "How to invest in Nifty 50 index funds on autopilot"
 slug: "how-to-invest-in-nifty-50-index-funds-on-autopilot-a-complete-guide"
 category: "finance"
 excerpt: "Investing in Nifty 50 index funds on autopilot through SIPs offers a powerful, low-cost path to long-term wealth, leveraging India's economic growth. This guide details how to set up and manage your Nifty 50 investments for maximum impact."

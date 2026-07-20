@@ -1,5 +1,5 @@
 ---
-title: "Invest on Autopilot"
+title: "How to Invest in Index Funds on Autopilot with SIP"
 slug: "invest-on-autopilot"
 category: "finance"
 excerpt: "Invest in index funds on autopilot for a hassle-free investment experience. Automate your investments with a SIP for higher returns."

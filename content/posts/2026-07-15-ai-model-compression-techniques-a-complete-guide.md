@@ -1,5 +1,5 @@
 ---
-title: "AI model compression techniques — A Complete Guide"
+title: "AI model compression techniques"
 slug: "ai-model-compression-techniques-a-complete-guide"
 category: "llm"
 excerpt: "AI model compression techniques are vital for deploying powerful models on resource-constrained devices, slashing costs and latency. This guide explores quantization, pruning, and distillation, crucial for practical AI."

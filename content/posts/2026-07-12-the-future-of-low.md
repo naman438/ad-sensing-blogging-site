@@ -1,5 +1,5 @@
 ---
-title: "The Future of Low"
+title: "The Future of Low-Code and No-Code Tools"
 slug: "the-future-of-low"
 category: "tech"
 excerpt: "The future of low-code and no-code tools is about democratizing software development, empowering citizen developers, and transforming enterprises. This shift will redefine how quickly ideas turn into functional applications."
