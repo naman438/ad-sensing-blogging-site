@@ -29,7 +29,7 @@ export default function AdUnit({ slot, format = 'auto', className = '' }: AdUnit
   if (!clientId || clientId === 'ca-pub-XXXXXXXXXXXXXXXX') {
     // Placeholder shown before AdSense approval
     return (
-      <div className={`bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center text-gray-400 text-sm ${className}`}>
+      <div className={`bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center text-gray-400 text-sm dark:bg-gray-800 dark:border-gray-700 dark:text-gray-600 ${className}`}>
         Ad unit — configure NEXT_PUBLIC_ADSENSE_CLIENT
       </div>
     );

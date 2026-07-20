@@ -40,15 +40,15 @@ export default function Header() {
               <Link
                 key={cat.slug}
                 href={`/category/${cat.slug}`}
-                className="px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800"
+                className="whitespace-nowrap px-2.5 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800"
               >
                 {cat.label}
               </Link>
             ))}
-            <Link href="/about" className="px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800">
+            <Link href="/about" className="whitespace-nowrap px-2.5 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800">
               About
             </Link>
-            <Link href="/contact" className="px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800">
+            <Link href="/contact" className="whitespace-nowrap px-2.5 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800">
               Contact
             </Link>
             <ThemeToggle />
