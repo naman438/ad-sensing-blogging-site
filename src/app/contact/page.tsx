@@ -63,7 +63,7 @@ export default function ContactPage() {
           </div>
 
           <a
-            href="mailto:contact@succeedstack.com"
+            href="mailto:succeedstack@gmail.com"
             className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 rounded-lg transition-colors"
           >
             Send Message
@@ -76,8 +76,8 @@ export default function ContactPage() {
         <div className="space-y-3 text-sm text-gray-600">
           <div className="flex items-center gap-3">
             <span className="text-blue-600 font-medium">Email:</span>
-            <a href="mailto:contact@succeedstack.com" className="hover:text-blue-600 transition-colors">
-              contact@succeedstack.com
+            <a href="mailto:succeedstack@gmail.com" className="hover:text-blue-600 transition-colors">
+              succeedstack@gmail.com
             </a>
           </div>
           <div className="flex items-center gap-3">
