@@ -46,15 +46,19 @@ export default async function HomePage() {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
 
-        {/* Hero — glass card so gradient mesh shows through */}
-        <section className="mb-10 rounded-3xl bg-white/60 backdrop-blur-md border border-white shadow-2xl px-5 py-12 sm:px-10 sm:py-16 text-center relative overflow-hidden">
+        {/* Hero — text directly on gradient mesh, no card */}
+        <section className="mb-10 px-4 pt-10 pb-12 sm:pt-14 sm:pb-16 text-center relative">
+          {/* Subtle centered glow */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div className="w-[500px] h-64 bg-indigo-300/20 rounded-full blur-3xl" />
+          </div>
           <div className="relative z-10">
-            <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 px-3 py-1 rounded-full text-xs font-semibold text-blue-600 mb-5">
+            <div className="inline-flex items-center gap-2 bg-white/80 border border-indigo-100 px-3 py-1 rounded-full text-xs font-semibold text-blue-600 mb-6 shadow-sm">
               <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
               Published twice daily
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 tracking-tight text-gray-900">{SITE_NAME}</h1>
+            <h1 className="text-3xl sm:text-5xl font-extrabold mb-4 tracking-tight text-gray-900">{SITE_NAME}</h1>
             <p className="text-gray-500 text-base sm:text-lg max-w-lg mx-auto leading-relaxed mb-8">
               Expert insights on finance, AI, technology, crypto &amp; productivity — fresh articles every day.
             </p>
