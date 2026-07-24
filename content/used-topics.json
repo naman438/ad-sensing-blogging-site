@@ -7,7 +7,8 @@
     "the carbon footprint of training large AI models",
     "AI model compression techniques",
     "context window size and why it matters",
-    "how AI models are trained on human feedback"
+    "how AI models are trained on human feedback",
+    "LLM benchmarks — what they measure and what they miss"
   ],
   "crypto": [
     "central bank digital currencies vs crypto",
