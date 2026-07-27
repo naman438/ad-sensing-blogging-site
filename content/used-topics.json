@@ -59,6 +59,7 @@
     "how HTTPS and TLS work under the hood",
     "how to read tech company valuations",
     "how recommender systems work",
-    "microservices vs monolith architecture"
+    "microservices vs monolith architecture",
+    "how to do a proper code review"
   ]
 }
