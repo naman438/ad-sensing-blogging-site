@@ -76,6 +76,7 @@
     "microservices vs monolith architecture",
     "how to do a proper code review",
     "database indexing strategies for performance",
-    "the evolution of frontend frameworks"
+    "the evolution of frontend frameworks",
+    "chaos engineering — testing system resilience"
   ]
 }
