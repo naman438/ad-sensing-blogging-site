@@ -97,6 +97,7 @@
     "chaos engineering — testing system resilience",
     "the rise of AI-native software startups",
     "software architecture patterns every dev should know",
-    "how to scale a web app to millions of users"
+    "how to scale a web app to millions of users",
+    "how to design a URL shortener — system design"
   ]
 }
