@@ -25,7 +25,8 @@
     "AI hallucination detection and mitigation",
     "comparing GPT-4, Claude, Gemini, and Llama",
     "the economics of training frontier AI models",
-    "on-device AI vs cloud AI models"
+    "on-device AI vs cloud AI models",
+    "building a RAG pipeline from scratch"
   ],
   "crypto": [
     "central bank digital currencies vs crypto",
