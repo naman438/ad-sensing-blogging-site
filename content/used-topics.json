@@ -27,7 +27,8 @@
     "the economics of training frontier AI models",
     "on-device AI vs cloud AI models",
     "building a RAG pipeline from scratch",
-    "hallucination in LLMs and how to reduce it"
+    "hallucination in LLMs and how to reduce it",
+    "fine-tuning vs in-context learning tradeoffs"
   ],
   "crypto": [
     "central bank digital currencies vs crypto",
