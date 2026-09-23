@@ -28,7 +28,8 @@
     "on-device AI vs cloud AI models",
     "building a RAG pipeline from scratch",
     "hallucination in LLMs and how to reduce it",
-    "fine-tuning vs in-context learning tradeoffs"
+    "fine-tuning vs in-context learning tradeoffs",
+    "distillation — making large models smaller"
   ],
   "crypto": [
     "central bank digital currencies vs crypto",
