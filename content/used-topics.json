@@ -30,7 +30,8 @@
     "hallucination in LLMs and how to reduce it",
     "fine-tuning vs in-context learning tradeoffs",
     "distillation — making large models smaller",
-    "how RAG (Retrieval-Augmented Generation) works"
+    "how RAG (Retrieval-Augmented Generation) works",
+    "AI agents and autonomous task execution"
   ],
   "crypto": [
     "central bank digital currencies vs crypto",
