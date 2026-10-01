@@ -31,7 +31,8 @@
     "fine-tuning vs in-context learning tradeoffs",
     "distillation — making large models smaller",
     "how RAG (Retrieval-Augmented Generation) works",
-    "AI agents and autonomous task execution"
+    "AI agents and autonomous task execution",
+    "cost of running LLMs in production"
   ],
   "crypto": [
     "central bank digital currencies vs crypto",
