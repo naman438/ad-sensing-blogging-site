@@ -33,7 +33,8 @@
     "how RAG (Retrieval-Augmented Generation) works",
     "AI agents and autonomous task execution",
     "cost of running LLMs in production",
-    "top use cases for LLMs in enterprise"
+    "top use cases for LLMs in enterprise",
+    "building AI pipelines with LangChain vs LlamaIndex"
   ],
   "crypto": [
     "central bank digital currencies vs crypto",
