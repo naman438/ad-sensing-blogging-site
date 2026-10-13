@@ -35,7 +35,8 @@
     "cost of running LLMs in production",
     "top use cases for LLMs in enterprise",
     "building AI pipelines with LangChain vs LlamaIndex",
-    "AI coding assistants compared"
+    "AI coding assistants compared",
+    "small language models vs large ones"
   ],
   "crypto": [
     "central bank digital currencies vs crypto",
