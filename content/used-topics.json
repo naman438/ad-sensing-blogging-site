@@ -36,7 +36,8 @@
     "top use cases for LLMs in enterprise",
     "building AI pipelines with LangChain vs LlamaIndex",
     "AI coding assistants compared",
-    "small language models vs large ones"
+    "small language models vs large ones",
+    "temperature and sampling in language models"
   ],
   "crypto": [
     "central bank digital currencies vs crypto",
