@@ -39,7 +39,8 @@
     "small language models vs large ones",
     "temperature and sampling in language models",
     "how LLMs handle code generation",
-    "synthetic data generation with LLMs"
+    "synthetic data generation with LLMs",
+    "LLMs for data analysis and insights"
   ],
   "crypto": [
     "central bank digital currencies vs crypto",
