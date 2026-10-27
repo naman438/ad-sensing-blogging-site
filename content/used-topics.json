@@ -212,6 +212,7 @@
     "building secure APIs — common vulnerabilities",
     "understanding technical debt and how to manage it",
     "how Kubernetes simplifies container orchestration",
-    "how CI/CD pipelines work"
+    "how CI/CD pipelines work",
+    "feature flags and progressive deployments"
   ]
 }
