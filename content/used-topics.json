@@ -221,6 +221,7 @@
     "understanding technical debt and how to manage it",
     "how Kubernetes simplifies container orchestration",
     "how CI/CD pipelines work",
-    "feature flags and progressive deployments"
+    "feature flags and progressive deployments",
+    "WebAssembly and the future of the browser"
   ]
 }
