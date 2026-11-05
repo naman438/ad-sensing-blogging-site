@@ -43,7 +43,8 @@
     "LLMs for data analysis and insights",
     "prompt engineering techniques for better results",
     "LLM safety alignment and RLHF",
-    "real-time AI with streaming APIs"
+    "real-time AI with streaming APIs",
+    "LLM tokenization and why it matters"
   ],
   "crypto": [
     "how to store crypto safely — cold vs hot wallets",
