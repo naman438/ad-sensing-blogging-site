@@ -46,7 +46,8 @@
     "real-time AI with streaming APIs",
     "LLM tokenization and why it matters",
     "AI for customer support — build vs buy",
-    "AI guardrails and content moderation"
+    "AI guardrails and content moderation",
+    "long-context models vs chunking strategies"
   ],
   "crypto": [
     "how to store crypto safely — cold vs hot wallets",
