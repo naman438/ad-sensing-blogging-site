@@ -47,7 +47,8 @@
     "LLM tokenization and why it matters",
     "AI for customer support — build vs buy",
     "AI guardrails and content moderation",
-    "long-context models vs chunking strategies"
+    "long-context models vs chunking strategies",
+    "open weights vs open source AI models"
   ],
   "crypto": [
     "how to store crypto safely — cold vs hot wallets",
