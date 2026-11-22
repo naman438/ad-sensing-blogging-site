@@ -48,7 +48,8 @@
     "AI for customer support — build vs buy",
     "AI guardrails and content moderation",
     "long-context models vs chunking strategies",
-    "open weights vs open source AI models"
+    "open weights vs open source AI models",
+    "structured output and JSON mode in LLMs"
   ],
   "crypto": [
     "how to store crypto safely — cold vs hot wallets",
