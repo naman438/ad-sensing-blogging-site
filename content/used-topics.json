@@ -149,6 +149,7 @@
     "the rise of platform engineering",
     "why TypeScript is taking over JavaScript",
     "GraphQL vs REST — which to choose",
-    "open source vs SaaS for developer tools"
+    "open source vs SaaS for developer tools",
+    "understanding rate limiting and API throttling"
   ]
 }
